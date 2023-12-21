@@ -11,23 +11,28 @@ export default defineConfig({
     cors: '*',
     port: '3000',
     strictPort: true,
+    hmr: {
+      host: 'localhost',
+      protocol: 'ws',
+    },
   },
   build: {
     minify: true,
     manifest: false,
-    assetsDir: '',
-    cssCodeSplit: false,
     rollupOptions: {
       input: {
-        consent: resolve(__dirname, 'src/scripts/global/consent.js'),
         main: resolve(__dirname, 'src/scripts/main.js'),
-        lanugage_util: resolve(__dirname, 'src/scripts/global/languageHelper.js'),
-        tabs_util: resolve(__dirname, 'src/scripts/insights/tabUtils.js'),
-        careers_util: resolve(__dirname, 'src/scripts/careers/careers_util.js')
       },
-      output:{
+      output: {
+        format: 'umd',
+        entryFileNames: 'main.js',
+        esModule: false,
+        compact: true,
+        globals: {
+          jquery: '$',
+        },
       },
-      preserveEntrySignatures: 'exports-only',
+      //preserveEntrySignatures: 'exports-only',
       external: ['jquery'],
     },
   },
