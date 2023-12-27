@@ -22,10 +22,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/scripts/main.js'),
+        home: resolve(__dirname, 'src/scripts/home/index.js'),
       },
       output: {
-        format: 'umd',
-        entryFileNames: 'main.js',
+        //format: 'umd',
+        inlineDynamicImports:false,
+        //entryFileNames: 'main.js',
         esModule: false,
         compact: true,
         globals: {

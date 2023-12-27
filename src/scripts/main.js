@@ -1,11 +1,5 @@
 import '../styles/global.css';
-
-// import {
-//   setCurrentYearLabel,
-//   populateHiddenInputFields,
-//   mountOnResizeListener,
-//   saveCampaignUtmPatameters,
-// } from './global/globalFunctions';
+import './home/index'
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('x');
