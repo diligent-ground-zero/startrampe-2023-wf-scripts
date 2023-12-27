@@ -1,0 +1,14 @@
+.startrampe_heading_group_text .heading-style-h2.clipped {
+    clip-path: polygon(0 0, 100% 0%, 100% 72%, 0% 100%);
+  }
+  
+  @media (min-width: 992px) {
+    .startrampe_heading_group_text .heading-style-h2.clipped {
+      clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+    }
+  }
+  @media (min-width: 1280px) {
+    .startrampe_heading_group_text .heading-style-h2.clipped {
+      clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+    }
+  } 
