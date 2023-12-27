@@ -1,6 +1,7 @@
 import '../styles/global.css';
-import './home/index'
+
+import { initSwipers } from './home/index';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('x');
+  initSwipers();
 });

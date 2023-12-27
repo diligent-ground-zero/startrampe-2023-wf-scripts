@@ -1,10 +1,10 @@
 :root {
   --startrampe-animation-duration: 0.6s;
-  --startrampe-easing-fuction: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  --startrampe-easing-fuction: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 section.slanted {
-  --slant-angle:-3deg;
+  --slant-angle: -3deg;
   --background: var(--black);
   position: relative;
   isolation: isolate;
@@ -27,19 +27,20 @@ section.slanted.top::after {
   background: var(--background);
   position: absolute;
   z-index: -1;
-  top:-5rem;
+  top: -5rem;
   left: 0;
   right: 0;
   height: 10rem;
   transform: skewY(var(--slant-angle));
 }
 
-.section_geschaftfelder 
-.geschaftfelder_content-container 
-.geschaft_slider 
-.geschaft-slider_mask 
-.geschaft-slider_slide
-.geschaft_slide-container h4{
+.section_geschaftfelder
+  .geschaftfelder_content-container
+  .geschaft_slider
+  .geschaft-slider_mask
+  .geschaft-slider_slide
+  .geschaft_slide-container
+  h4 {
   clip-path: polygon(30% 100%, 100% min(70%, 25vh), 100% 0, 0 0, 0 100%);
 }
 
@@ -53,31 +54,33 @@ section.slanted.top::after {
   }
 }
 @media (min-width: 1280px) {
-  .section_geschaftfelder 
-.geschaftfelder_content-container 
-.geschaft_slider 
-.geschaft-slider_mask 
-.geschaft-slider_slide
-.geschaft_slide-container h4{
-  transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
-}
+  .section_geschaftfelder
+    .geschaftfelder_content-container
+    .geschaft_slider
+    .geschaft-slider_mask
+    .geschaft-slider_slide
+    .geschaft_slide-container
+    h4 {
+    transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
+  }
 
-.section_geschaftfelder
-.geschaftfelder_content-container 
-.geschaft_slider
-.geschaft-slider_mask 
-.geschaft-slider_slide:hover {
-  cursor: pointer;
-}
+  .section_geschaftfelder
+    .geschaftfelder_content-container
+    .geschaft_slider
+    .geschaft-slider_mask
+    .geschaft-slider_slide:hover {
+    cursor: pointer;
+  }
 
-.section_geschaftfelder
-.geschaftfelder_content-container 
-.geschaft_slider
-.geschaft-slider_mask 
-.geschaft-slider_slide:hover
-.geschaft_slide-container h4 {
-  clip-path: polygon(50% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
-}
+  .section_geschaftfelder
+    .geschaftfelder_content-container
+    .geschaft_slider
+    .geschaft-slider_mask
+    .geschaft-slider_slide:hover
+    .geschaft_slide-container
+    h4 {
+    clip-path: polygon(50% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
+  }
 
   .startrampe_heading_group_text .heading-style-h2.clipped {
     clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);

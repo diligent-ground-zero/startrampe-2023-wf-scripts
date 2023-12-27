@@ -15,6 +15,12 @@ export default defineConfig({
       host: 'localhost',
       protocol: 'ws',
     },
+    // proxy: {
+    //   '/src/scripts/main.js': {
+    //     target: 'http:localhost:3000/src/scripts/main.js',
+    //     changeOrigin: true,
+    //   }
+    // },
   },
   build: {
     minify: true,
@@ -22,12 +28,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/scripts/main.js'),
-        home: resolve(__dirname, 'src/scripts/home/index.js'),
       },
       output: {
-        //format: 'umd',
-        inlineDynamicImports:false,
-        //entryFileNames: 'main.js',
+        format: 'umd',
+        entryFileNames: 'main.js',
         esModule: false,
         compact: true,
         globals: {
