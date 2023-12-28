@@ -34,6 +34,16 @@ section.slanted.top::after {
   transform: skewY(var(--slant-angle));
 }
 
+/* TODO REMOVE IN WEBFLOW */
+.swiper-wrapper {
+  padding: 0 !important;
+  grid-column-gap: 0rem !important;
+}
+
+.section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
+  clip-path: polygon(30% 100%, 100% min(70%, 20vh), 100% 0, 0 0, 0 100%);
+}
+
 .section_geschaftfelder
   .geschaftfelder_content-container
   .geschaft_slider
@@ -54,6 +64,18 @@ section.slanted.top::after {
   }
 }
 @media (min-width: 1280px) {
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
+    transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
+  }
+
+  .section_unser_netzwerk
+    .netzwerk_grid-element
+    .netzwerk_item
+    .netzwerk-item_title-element:hover
+    .netzwerk-item_title {
+    clip-path: polygon(30% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
+  }
+
   .section_geschaftfelder
     .geschaftfelder_content-container
     .geschaft_slider
