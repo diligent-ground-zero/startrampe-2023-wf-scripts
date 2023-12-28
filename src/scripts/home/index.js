@@ -37,7 +37,7 @@ export const initSwipers = () => {
     document.querySelector('.section_was_wir_tun ').append(scrollbar);
 
     const swiper = new Swiper('.swiper-container', {
-      modules: [Manipulation, Scrollbar],
+      modules: [Manipulation],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
