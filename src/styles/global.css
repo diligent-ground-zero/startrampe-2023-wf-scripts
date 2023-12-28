@@ -34,7 +34,6 @@ section.slanted.top::after {
   transform: skewY(var(--slant-angle));
 }
 
-/* TODO REMOVE IN WEBFLOW */
 .swiper-wrapper {
   padding: 0 !important;
   grid-column-gap: 0rem !important;
