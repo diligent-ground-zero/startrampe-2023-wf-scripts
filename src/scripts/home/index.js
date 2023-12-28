@@ -11,7 +11,7 @@ export const initSwipers = () => {
     centeredSlides: true,
     centeredSlidesBounds: true,
     centerInsufficientSlides: true,
-    allowTouchMove: false,
+    // allowTouchMove: false,
     slideToClickedSlide: true,
     breakpoints: {
       420: {
