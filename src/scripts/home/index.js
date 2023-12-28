@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
-import { Manipulation } from 'swiper/modules';
+import { Manipulation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 
 export const initSwipers = () => {
+  const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
   if (window.matchMedia('(max-width: 992px)').matches) {
-    const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
     let previousActiveElementIndex;
 
     for (let i = 0; i < wasWirTunSwiper.children.length; i++) {
@@ -31,57 +31,38 @@ export const initSwipers = () => {
 
   if (window.matchMedia('(min-width: 992px)').matches) {
     let previousActiveSlideIndex = undefined;
-
+    const scrollbar = document.createElement('div');
+    scrollbar.classList = 'swiper-scroller';
+    document.querySelector('.section_was_wir_tun ').append(scrollbar);
     const swiper = new Swiper('.swiper-container', {
-      modules: [Manipulation],
+      modules: [Manipulation, Scrollbar],
       slidesPerView: 'auto',
       centeredSlides: true,
-      centeredSlidesBounds: true,
-      centerInsufficientSlides: true,
       allowTouchMove: true,
-      //slideToClickedSlide: true,
+      scrollbar: {
+        el: '.swiper-scroller',
+        hide: false,
+      },
       breakpoints: {
         420: {
           initialSlide: 1,
           slidesPerView: 1,
           slidesPerGroup: 1,
-          // slidesPerView: 1,
-          // spaceBetween: 0,
-        },
-        767: {
-          initialSlide: 1,
-          slidesPerView: 2,
-          spaceBetween: 50,
-          slidesPerGroup: 1,
-          slidesOffsetAfter: 100,
-          slidesOffsetBefore: 100,
         },
         991: {
           initialSlide: 1,
-          spaceBetween: 50,
-          slidesOffsetAfter: 100,
-          slidesOffsetBefore: 100,
-          slidesPerView: 2.5,
-          slidesPerGroup: 1,
-        },
-        1280: {
-          slidesPerView: 2.5,
-          initialSlide: 1,
-          slidesPerGroup: 1,
-          spaceBetween: 25,
-          slidesOffsetAfter: 50,
+          slidesOffsetBefore: -250,
         },
         1440: {
-          slidesPerView: 3,
-          slidesPerGroup: 1,
-          slidesOffsetAfter: 400,
-          centeredSlides: true,
+          slidesOffsetBefore: -250,
+          initialSlide: 1,
         },
       },
     });
 
     swiper.on('click', (swiper, event) => {
       let currentSlide = swiper.slides[swiper.clickedIndex];
+      console.log(currentSlide);
       let newSlide = document.createElement('div');
       newSlide.classList.add('swiper-slide');
       newSlide.dataset.dynamic = true; // Add custom attribute to new slides
@@ -94,15 +75,15 @@ export const initSwipers = () => {
       if (previousActiveSlideIndex === undefined) {
         currentSlide.dataset.open = true;
         swiper.addSlide(swiper.clickedIndex + 1, newSlide);
-        swiper.slideTo(swiper.clickedIndex + 1); // Navigate to the newly added slide
+        swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
       } else if (previousActiveSlideIndex === swiper.clickedIndex) {
-        if (swiper.slides[swiper.clickedIndex + 1].dataset.dynamic) {
+        if (swiper.slides[swiper.clickedIndex + 1]?.dataset.dynamic) {
           // Check for custom attribute before removing
           swiper.removeSlide(swiper.clickedIndex + 1);
         } else {
           currentSlide.dataset.open = true;
           swiper.addSlide(swiper.clickedIndex + 1, newSlide);
-          swiper.slideTo(swiper.clickedIndex + 1); // Navigate to the newly added slide
+          swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
         }
       } else {
         if (
@@ -114,7 +95,7 @@ export const initSwipers = () => {
         }
         currentSlide.dataset.open = true;
         swiper.addSlide(swiper.clickedIndex + 1, newSlide);
-        swiper.slideTo(swiper.clickedIndex + 1); // Navigate to the newly added slide
+        swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
       }
 
       previousActiveSlideIndex = swiper.clickedIndex;
