@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Manipulation, Scrollbar } from 'swiper/modules';
+import { Manipulation } from 'swiper/modules';
 import 'swiper/css';
 
 export const initSwipers = () => {
@@ -33,16 +33,18 @@ export const initSwipers = () => {
     let previousActiveSlideIndex = undefined;
     const scrollbar = document.createElement('div');
     scrollbar.classList = 'swiper-scroller';
+
     document.querySelector('.section_was_wir_tun ').append(scrollbar);
+
     const swiper = new Swiper('.swiper-container', {
       modules: [Manipulation, Scrollbar],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
-      scrollbar: {
-        el: '.swiper-scroller',
-        hide: false,
-      },
+      // scrollbar: {
+      //   el: '.swiper-scroller',
+      //   hide: false,
+      // },
       breakpoints: {
         420: {
           initialSlide: 1,
@@ -62,7 +64,6 @@ export const initSwipers = () => {
 
     swiper.on('click', (swiper, event) => {
       let currentSlide = swiper.slides[swiper.clickedIndex];
-      console.log(currentSlide);
       let newSlide = document.createElement('div');
       newSlide.classList.add('swiper-slide');
       newSlide.dataset.dynamic = true; // Add custom attribute to new slides
