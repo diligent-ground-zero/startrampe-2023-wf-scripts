@@ -34,11 +34,6 @@ section.slanted.top::after {
   transform: skewY(var(--slant-angle));
 }
 
-.swiper-wrapper {
-  padding: 0 !important;
-  grid-column-gap: 0rem !important;
-}
-
 .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
   clip-path: polygon(30% 100%, 100% min(70%, 20vh), 100% 0, 0 0, 0 100%);
 }
