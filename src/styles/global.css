@@ -249,6 +249,42 @@ section.slanted.top::after {
   clip-path: polygon(0% 10%, 62% 2%, 78% 88%, 0% 100%);
 }
 
+
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+  align-items: stretch;
+}
+
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-image-wrap {
+  flex-shrink: 0;
+}
+
+/* section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-image-wrap {
+  transform: scale(1);
+} */
+
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-text-wrap ,
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-image-wrap .swiper-slide-team-image-wrap-expanded {
+  /* transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction); */
+  transform: scale(0);
+  visibility: hidden;
+}
+
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-text-wrap ,
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-image-wrap .swiper-slide-team-image-wrap-expanded {
+  visibility: visible;
+  transform: scale(1);
+}
+
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-image-wrap .swiper-slide-team-image-wrap-preview{
+  display: none;
+}
+
 @media (min-width: 992px) {
   .swiper-scroller {
     cursor: grab;

@@ -66,7 +66,19 @@ export const initSwipers = () => {
       },
     });
 
-    console.log(swiper);
+    const swiper2 = new Swiper('section.section_unser_team .swiper-container', {
+      modules: [Manipulation],
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      allowTouchMove: true,
+      slidesOffsetAfter: 50,
+      slidesPerView: 3,
+      centeredSlides: true,
+      initialSlide:1,
+      slideToClickedSlide:true,
+    });
+
+
     swiper.on('click', (swiper, event) => {
       let currentSlide = swiper.slides[swiper.clickedIndex];
       let newSlide = document.createElement('div');
