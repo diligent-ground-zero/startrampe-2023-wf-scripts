@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Manipulation } from 'swiper/modules';
+import { Manipulation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 
 export const initSwipers = () => {
@@ -36,15 +36,16 @@ export const initSwipers = () => {
 
     document.querySelector('.section_was_wir_tun ').append(scrollbar);
 
-    const swiper = new Swiper('.swiper-container', {
-      modules: [Manipulation],
+    const swiper = new Swiper('section.section_was_wir_tun .swiper-container', {
+      modules: [Manipulation, Scrollbar],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
-      // scrollbar: {
-      //   el: '.swiper-scroller',
-      //   hide: false,
-      // },
+      scrollbar: {
+        el: '.swiper-scroller',
+        hide: false,
+        draggable: true,
+      },
       breakpoints: {
         420: {
           initialSlide: 1,
@@ -56,12 +57,16 @@ export const initSwipers = () => {
           slidesOffsetBefore: -250,
         },
         1440: {
-          slidesOffsetBefore: -250,
+          slidesOffsetBefore: -150,
+          slidesOffsetAfter: 50,
           initialSlide: 1,
+          slidesPerView: 'auto',
+          centeredSlides: true,
         },
       },
     });
 
+    console.log(swiper);
     swiper.on('click', (swiper, event) => {
       let currentSlide = swiper.slides[swiper.clickedIndex];
       let newSlide = document.createElement('div');
