@@ -14,13 +14,7 @@ export default defineConfig({
     hmr: {
       host: 'localhost',
       protocol: 'ws',
-    },
-    // proxy: {
-    //   '/src/scripts/main.js': {
-    //     target: 'http:localhost:3000/src/scripts/main.js',
-    //     changeOrigin: true,
-    //   }
-    // },
+    }
   },
   build: {
     minify: true,

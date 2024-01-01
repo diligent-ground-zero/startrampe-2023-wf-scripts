@@ -74,10 +74,9 @@ export const initSwipers = () => {
       slidesOffsetAfter: 50,
       slidesPerView: 3,
       centeredSlides: true,
-      initialSlide:1,
-      slideToClickedSlide:true,
+      initialSlide: 1,
+      slideToClickedSlide: true,
     });
-
 
     swiper.on('click', (swiper, event) => {
       let currentSlide = swiper.slides[swiper.clickedIndex];

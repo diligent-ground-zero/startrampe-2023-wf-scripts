@@ -5,7 +5,7 @@
 
 section.slanted {
   --slant-angle: -3deg;
-  --background: var(--black);
+  --background: unset;
   position: relative;
   isolation: isolate;
 }
@@ -16,6 +16,10 @@ section.slanted::after {
   z-index: -1;
   inset: 0;
   transform: skewY(var(--slant-angle));
+}
+
+.section_was_wir_tun.slanted {
+  background-color: unset !important;
 }
 
 section.slanted.black::after {
@@ -175,8 +179,8 @@ section.slanted.top::after {
   aspect-ratio: 9/14;
   object-fit: cover;
   object-position: 80% 50%;
-  min-height: auto;
-  min-width: auto;
+  min-height: 25rem;
+  /* min-width: initial; */
 }
 
 .section_was_wir_tun
@@ -249,11 +253,10 @@ section.slanted.top::after {
   clip-path: polygon(0% 10%, 62% 2%, 78% 88%, 0% 100%);
 }
 
-
 section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
   flex-direction: row;
-  align-items: center
+  align-items: center;
 }
 
 section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
@@ -262,27 +265,61 @@ section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swipe
 
 section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-image-wrap {
   flex-shrink: 0;
+  width: 100%;
+}
+
+section.section_unser_team
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .swiper-slide-team-image-wrap
+  > .swiper-slide-team-image-wrap-inner-container
+  img {
+  max-width: 50%;
 }
 
 /* section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-image-wrap {
   transform: scale(1);
 } */
 
-section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-text-wrap ,
-section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-image-wrap .swiper-slide-team-image-wrap-expanded {
+section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-team-text-wrap,
+section.section_unser_team
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .swiper-slide-team-image-wrap
+  .swiper-slide-team-image-wrap-expanded {
   /* transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction); */
   transform: scale(0);
   visibility: hidden;
 }
 
-section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-text-wrap ,
-section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-image-wrap .swiper-slide-team-image-wrap-expanded {
+section.section_unser_team
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap,
+section.section_unser_team
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-image-wrap
+  .swiper-slide-team-image-wrap-expanded {
   visibility: visible;
   transform: scale(1);
 }
 
-section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide-team-image-wrap .swiper-slide-team-image-wrap-preview{
+section.section_unser_team
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-image-wrap
+  .swiper-slide-team-image-wrap-preview {
   display: none;
+}
+
+.swiper-scroller {
+  overflow: hidden;
 }
 
 @media (min-width: 992px) {
@@ -378,12 +415,13 @@ section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swipe
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper > div {
     aspect-ratio: 1/1;
-    min-width: 40rem;
+    min-width: 45rem;
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper img {
     transition: transform var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
     min-height: 100%;
+    min-width: 25rem;
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide:hover .wwt-slide_image-wrapper img {
@@ -464,4 +502,7 @@ section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swipe
     clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
     backface-visibility: hidden;
   }
+}
+
+@media (min-width: 1280px) {
 }
