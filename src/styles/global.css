@@ -5,8 +5,12 @@
 
 header.navigation {
   transition: background-color var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+  background: unset;
 }
 header.navigation.scrolled {
+  background-color: var(--black);
+}
+header.navigation.menu-open {
   background-color: var(--black);
 }
 
@@ -44,9 +48,12 @@ section.slanted.top::after {
   height: 10rem;
   transform: skewY(var(--slant-angle));
 }
+section.section_geschaftfelder.slanted.top.slanted.top {
+  overflow: visible;
+}
 
 .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
-  clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
+  clip-path: unset;
 }
 
 .section_geschaftfelder
@@ -60,7 +67,7 @@ section.slanted.top::after {
 }
 
 .startrampe_heading_group_text .heading-style-h2.clipped {
-  clip-path: polygon(0 0, 100% 0%, 100% 72%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 55%, 0% 100%);
 }
 
 .section_was_wir_tun .swiper-container {
@@ -296,15 +303,15 @@ section.section_unser_team
   .swiper-slide
   .swiper-slide-team-image-wrap
   .swiper-slide-team-image-left,
-  section.section_unser_team
+section.section_unser_team
   .swiper-container
   .swiper-wrapper
   .swiper-slide
   .swiper-slide-team-image-wrap
-  .swiper-slide-team-image-right{
+  .swiper-slide-team-image-right {
   transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
   transform: scale(0.9);
-  opacity:0;
+  opacity: 0;
   visibility: hidden;
 }
 
@@ -324,9 +331,9 @@ section.section_unser_team
   .swiper-wrapper
   .swiper-slide.swiper-slide-active
   .swiper-slide-team-image-wrap
-  .swiper-slide-team-image-left  {
+  .swiper-slide-team-image-left {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
   transform: scale(1);
 }
 
@@ -341,6 +348,12 @@ section.section_unser_team
 
 .swiper-scroller {
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .startrampe_heading_group_text .heading-style-h2.clipped {
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+  }
 }
 
 @media (min-width: 992px) {
@@ -459,6 +472,10 @@ section.section_unser_team
     scale: 1;
   }
 
+  .section_hero .hero-black-section .hero_background {
+    height: 160%;
+    top: -75%;
+  }
   .section_hero .hero_image-section .hero_button-wrapper .embed-arrow {
     animation: bouncingArrow 2s var(--startrampe-easing-fuction) infinite;
   }
@@ -479,11 +496,17 @@ section.section_unser_team
     }
   }
 
-  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
-    transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
+  .section_unser_netzwerk .netzwerk_grid-element {
+    grid-row-gap: 0;
   }
 
-  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover{
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
+    transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    height: auto !important;
+  }
+
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover {
     cursor: pointer;
     clip-path: polygon(0% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
   }

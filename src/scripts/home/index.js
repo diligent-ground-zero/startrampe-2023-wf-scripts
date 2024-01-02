@@ -23,7 +23,6 @@ export const initSwipers = () => {
           delete wasWirTunSwiper.children[previousActiveElementIndex].dataset.open;
           currentElement.dataset.open = true;
         }
-
         previousActiveElementIndex = i;
       });
     }

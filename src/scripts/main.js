@@ -5,5 +5,5 @@ import { globalScripts } from './global';
 
 document.addEventListener('DOMContentLoaded', () => {
   initSwipers();
-  globalScripts()
+  globalScripts();
 });
