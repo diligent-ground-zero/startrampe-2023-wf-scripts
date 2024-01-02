@@ -27,6 +27,29 @@ export const initSwipers = () => {
       });
     }
   }
+  const swiper2 = new Swiper('section.section_unser_team .swiper-container', {
+    modules: [Manipulation],
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    allowTouchMove: true,
+    slidesOffsetAfter: 50,
+    slidesPerView: 3,
+    centeredSlides: true,
+    initialSlide: 1,
+    // spaceBetween:250,
+    slideToClickedSlide: true,
+    breakpoints: {    
+      528: {
+        spaceBetween: 50
+      },
+      991: {
+      spaceBetween: 50
+    },
+    1280: {
+      spaceBetween:250
+    },
+    }
+  });
 
   if (window.matchMedia('(min-width: 992px)').matches) {
     let previousActiveSlideIndex = undefined;
@@ -55,27 +78,13 @@ export const initSwipers = () => {
           initialSlide: 1,
           slidesOffsetBefore: -250,
         },
-        1440: {
-          slidesOffsetBefore: -150,
-          slidesOffsetAfter: 50,
+        1280: {
           initialSlide: 1,
           slidesPerView: 'auto',
           centeredSlides: true,
+          spaceBetween: 25,
         },
       },
-    });
-
-    const swiper2 = new Swiper('section.section_unser_team .swiper-container', {
-      modules: [Manipulation],
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      allowTouchMove: true,
-      slidesOffsetAfter: 50,
-      slidesPerView: 3,
-      centeredSlides: true,
-      initialSlide: 1,
-      slideToClickedSlide: true,
-      spaceBetween: 150,
     });
 
     swiper.on('click', (swiper, event) => {

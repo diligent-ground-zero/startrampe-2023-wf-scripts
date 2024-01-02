@@ -8,11 +8,17 @@ export const globalScripts = () => {
       headerContainer.classList.remove('scrolled');
     }
   };
-  //add an event listener to the scroll event
-  let debounceTimer;
+
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(handleScroll, 50);
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+  
+      ticking = true;
+    }
   });
 
   //add a mutation observer to the .navbar_menu-button.w-nav-button element so when the elements has the class .w--open it should do smt
