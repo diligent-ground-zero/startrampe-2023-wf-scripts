@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Manipulation, Scrollbar } from 'swiper/modules';
+import { Manipulation, Scrollbar,Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 export const initSwipers = () => {
@@ -36,7 +36,6 @@ export const initSwipers = () => {
     slidesPerView: 3,
     centeredSlides: true,
     initialSlide: 1,
-    // spaceBetween:250,
     slideToClickedSlide: true,
     breakpoints: {    
       528: {
@@ -59,7 +58,7 @@ export const initSwipers = () => {
     document.querySelector('.section_was_wir_tun ').append(scrollbar);
 
     const swiper = new Swiper('section.section_was_wir_tun .swiper-container', {
-      modules: [Manipulation, Scrollbar],
+      modules: [Manipulation, Scrollbar,Autoplay],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
@@ -68,13 +67,12 @@ export const initSwipers = () => {
         hide: false,
         draggable: true,
       },
+      autoplay:{
+        delay: 5000,
+        pauseOnMouseEnter: true,
+      },
       breakpoints: {
-        420: {
-          initialSlide: 1,
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-        },
-        991: {
+        992: {
           initialSlide: 1,
           slidesOffsetBefore: -250,
         },

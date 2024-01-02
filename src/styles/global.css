@@ -256,7 +256,7 @@ section.section_unsere-geschaftfelder
   .wwt-slide_image-wrapper
   .wwt-slide-image_crowd-left {
   clip-path: inset(30% 0 20% 31%);
-  transform: translateX(50px);
+  transform: translateX(0px);
   z-index: 1;
 }
 
@@ -582,6 +582,6 @@ section.section_unser_team
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide {
-    width: 35rem;
+    width: 32rem;
   }
 }
