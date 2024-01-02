@@ -76,6 +76,7 @@ export const initSwipers = () => {
       centeredSlides: true,
       initialSlide: 1,
       slideToClickedSlide: true,
+      spaceBetween: 150,
     });
 
     swiper.on('click', (swiper, event) => {
