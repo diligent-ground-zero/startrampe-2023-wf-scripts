@@ -3,9 +3,16 @@
   --startrampe-easing-fuction: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
+header.navigation {
+  transition: background-color var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+header.navigation.scrolled {
+  background-color: var(--black);
+}
+
 section.slanted {
   --slant-angle: -3deg;
-  --background: unset;
+  --background: var(--black);
   position: relative;
   isolation: isolate;
 }
@@ -38,8 +45,8 @@ section.slanted.top::after {
   transform: skewY(var(--slant-angle));
 }
 
-.section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
-  clip-path: polygon(30% 100%, 100% min(70%, 20vh), 100% 0, 0 0, 0 100%);
+.section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
 }
 
 .section_geschaftfelder
@@ -472,16 +479,13 @@ section.section_unser_team
     }
   }
 
-  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
     transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
   }
 
-  .section_unser_netzwerk
-    .netzwerk_grid-element
-    .netzwerk_item
-    .netzwerk-item_title-element:hover
-    .netzwerk-item_title {
-    clip-path: polygon(30% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover{
+    cursor: pointer;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
   }
 
   .section_geschaftfelder
