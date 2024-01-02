@@ -48,7 +48,8 @@ section.slanted.top::after {
   height: 10rem;
   transform: skewY(var(--slant-angle));
 }
-section.section_geschaftfelder.slanted.top.slanted.top {
+
+section.section_unsere-geschaftfelder.slanted.top {
   overflow: visible;
 }
 
@@ -357,6 +358,11 @@ section.section_unser_team
 }
 
 @media (min-width: 992px) {
+  div.section_wer_wir_sind,
+  section.section_wer_wir_sind {
+    overflow-x: hidden;
+  }
+
   .swiper-scroller {
     cursor: grab;
     background-color: rgba(255, 255, 255, 0.261);
@@ -543,7 +549,4 @@ section.section_unser_team
     clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
     backface-visibility: hidden;
   }
-}
-
-@media (min-width: 1280px) {
 }
