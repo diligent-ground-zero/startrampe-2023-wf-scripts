@@ -19,13 +19,17 @@ export default defineConfig({
   build: {
     minify: true,
     manifest: false,
+    // cssCodeSplit:false,
     rollupOptions: {
       input: {
+        indexStyles: resolve(__dirname, 'src/styles/index.css'),
         main: resolve(__dirname, 'src/scripts/main.js'),
+        home: resolve(__dirname, 'src/scripts/home/main.js'),
       },
       output: {
-        format: 'umd',
-        entryFileNames: 'main.js',
+        //format: 'umd',
+        inlineDynamicImports: false,
+        // entryFileNames: 'main.js',
         esModule: false,
         compact: true,
         globals: {

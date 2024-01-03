@@ -1,5 +1,5 @@
 export const globalScripts = () => {
-  const headerContainer = document.querySelector('header.navigation');
+  const headerContainer = document.querySelector('div.navbar');
   //create a function that listents to the scroll event, and adds a class to the header if the page is scrolled down
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -16,7 +16,7 @@ export const globalScripts = () => {
         handleScroll();
         ticking = false;
       });
-  
+
       ticking = true;
     }
   });

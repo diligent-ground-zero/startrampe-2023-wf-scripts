@@ -1,0 +1,1 @@
+:root{--startrampe-animation-duration: .6s;--startrampe-easing-fuction: cubic-bezier(.39, .575, .565, 1)}.navbar{background:unset}.navbar.scrolled,.navbar.menu-open{background-color:var(--black)}

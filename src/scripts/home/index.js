@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Manipulation, Scrollbar,Autoplay } from 'swiper/modules';
+import { Manipulation, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
 export const initSwipers = () => {
@@ -37,17 +37,17 @@ export const initSwipers = () => {
     centeredSlides: true,
     initialSlide: 1,
     slideToClickedSlide: true,
-    breakpoints: {    
+    breakpoints: {
       528: {
-        spaceBetween: 50
+        spaceBetween: 50,
       },
       991: {
-      spaceBetween: 50
+        spaceBetween: 50,
+      },
+      1280: {
+        spaceBetween: 250,
+      },
     },
-    1280: {
-      spaceBetween:250
-    },
-    }
   });
 
   if (window.matchMedia('(min-width: 992px)').matches) {
@@ -55,19 +55,26 @@ export const initSwipers = () => {
     const scrollbar = document.createElement('div');
     scrollbar.classList = 'swiper-scroller';
 
-    document.querySelector('.section_was_wir_tun ').append(scrollbar);
+    document.querySelector('.section_was_wir_tun').append(scrollbar);
+
+    const toggleScrollbarVisibility = () => {
+      if (scrollbar.classList.contains('hidden')) {
+        scrollbar.classList.remove('hidden');
+      } else {
+        scrollbar.classList.add('hidden');
+      }
+    };
 
     const swiper = new Swiper('section.section_was_wir_tun .swiper-container', {
-      modules: [Manipulation, Scrollbar,Autoplay],
+      modules: [Manipulation, Pagination, Autoplay],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
-      scrollbar: {
+      pagination: {
         el: '.swiper-scroller',
-        hide: false,
-        draggable: true,
+        clickable: true,
       },
-      autoplay:{
+      autoplay: {
         delay: 5000,
         pauseOnMouseEnter: true,
       },
@@ -121,7 +128,7 @@ export const initSwipers = () => {
         swiper.addSlide(swiper.clickedIndex + 1, newSlide);
         swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
       }
-
+      toggleScrollbarVisibility();
       previousActiveSlideIndex = swiper.clickedIndex;
     });
   }
