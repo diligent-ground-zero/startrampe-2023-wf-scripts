@@ -4,6 +4,32 @@ import 'swiper/css';
 
 export const initSwipers = () => {
   const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
+
+  const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
+    modules: [Manipulation],
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    allowTouchMove: true,
+    slidesOffsetAfter: 50,
+    slidesPerView: 3,
+    centeredSlides: true,
+    initialSlide: 10,
+    slideToClickedSlide: true,
+    breakpoints: {
+      528: {
+        spaceBetween: 25,
+        slidesPerView: 2.5,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1280: {
+        spaceBetween: 150,
+      },
+    },
+  });
+
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
 
@@ -27,28 +53,6 @@ export const initSwipers = () => {
       });
     }
   }
-  const swiper2 = new Swiper('section.section_unser_team .swiper-container', {
-    modules: [Manipulation],
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    allowTouchMove: true,
-    slidesOffsetAfter: 50,
-    slidesPerView: 3,
-    centeredSlides: true,
-    initialSlide: 1,
-    slideToClickedSlide: true,
-    breakpoints: {
-      528: {
-        spaceBetween: 50,
-      },
-      991: {
-        spaceBetween: 50,
-      },
-      1280: {
-        spaceBetween: 250,
-      },
-    },
-  });
 
   if (window.matchMedia('(min-width: 992px)').matches) {
     let previousActiveSlideIndex = undefined;
