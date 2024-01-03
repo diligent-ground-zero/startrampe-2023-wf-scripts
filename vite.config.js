@@ -22,12 +22,11 @@ export default defineConfig({
     // cssCodeSplit:false,
     rollupOptions: {
       input: {
-        indexStyles: resolve(__dirname, 'src/styles/index.css'),
+        index: resolve(__dirname, 'src/scripts/home/main.js'),
         main: resolve(__dirname, 'src/scripts/main.js'),
-        home: resolve(__dirname, 'src/scripts/home/main.js'),
       },
       output: {
-        //format: 'umd',
+        // format: 'umd',
         inlineDynamicImports: false,
         // entryFileNames: 'main.js',
         esModule: false,
