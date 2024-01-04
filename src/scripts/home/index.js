@@ -31,7 +31,10 @@ export const initSwipers = () => {
         spaceBetween: 50,
       },
       1280: {
-        spaceBetween: 150,
+        spaceBetween: 100,
+      },
+      1440: {
+        spaceBetween: 200,
       },
     },
   });

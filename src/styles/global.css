@@ -768,7 +768,7 @@ section.section_unser_team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap
     .swiper-slide-team-text-wrap-upper-text {
-    transform: translate(300px, 50px);
+    transform: translate(350px, 50px);
   }
 
   section.section_unser_team
@@ -777,7 +777,7 @@ section.section_unser_team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap
     .swiper-slide-team-text-wrap-inner-linkedin {
-    transform: translateX(300px);
+    transform: translateX(350px);
   }
 
   section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
@@ -804,6 +804,19 @@ section.section_unser_team
     .swiper-slide-team-image-wrap {
     justify-content: flex-start;
   }
+
+  section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev {
+    justify-content: flex-end;
+  }
+
+  section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next {
+    justify-content: flex-start;
+  }
+
+  section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+    transform: translateX(50px);
+  }
+
   section.section_unser_team
     .swiper-container
     .swiper-wrapper
@@ -823,13 +836,8 @@ section.section_unser_team
   section.section_unser_team
     .swiper-container
     .swiper-wrapper
-    .swiper-slide.swiper-slide-prev
-    .swiper-slide-team-image-wrap-preview,
-  section.section_unser_team
-    .swiper-container
-    .swiper-wrapper
-    .swiper-slide.swiper-slide-next
-    .swiper-slide-team-image-wrap-preview {
-    width: auto;
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-image-wrap {
+    transform: translateX(-150px);
   }
 }
