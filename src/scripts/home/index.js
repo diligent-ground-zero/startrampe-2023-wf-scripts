@@ -7,22 +7,28 @@ export const initSwipers = () => {
 
   const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
     modules: [Manipulation],
-    slidesPerView: 'auto',
-    centeredSlides: true,
+    slidesPerView: 2,
     allowTouchMove: true,
-    slidesOffsetAfter: 50,
-    slidesPerView: 3,
     centeredSlides: true,
     initialSlide: 10,
     slideToClickedSlide: true,
+    spaceBetween: 25,
     breakpoints: {
-      528: {
+      420: {
         spaceBetween: 25,
+        slidesPerView: 3,
+      },
+      620: {
+        spaceBetween: 50,
         slidesPerView: 2.5,
+      },
+      768: {
+        spaceBetween: 25,
+        slidesPerView: 3,
       },
       991: {
         slidesPerView: 3,
-        spaceBetween: 25,
+        spaceBetween: 50,
       },
       1280: {
         spaceBetween: 150,
