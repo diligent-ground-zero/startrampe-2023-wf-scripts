@@ -440,6 +440,10 @@ section.section_unser_team
   transform: translate(0, 0);
 }
 
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
+  transform: translate(0px, -25px);
+}
+
 @media (min-width: 620px) {
   section.section_unser_team .swiper-container {
     min-height: auto;
@@ -610,7 +614,7 @@ section.section_unser_team
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper > div {
     aspect-ratio: 1/1;
-    min-width: 45rem;
+    min-width: 30rem;
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper img {
@@ -782,9 +786,36 @@ section.section_unser_team
     .netzwerk-item_title {
     line-height: 1.8;
   }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
+    transform: translate(-75px, -25px);
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper.ideation {
+    transform: translate(-100px, -25px);
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide.crowd-ideation .wwt-slide_image-wrapper {
+    transform: translate(-25px, -25px);
+  }
 }
 
 @media (min-width: 1280px) {
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
+    transform: translate(-75px, -25px);
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper.ideation {
+    transform: translate(-100px, -25px);
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide.crowd-ideation .wwt-slide_image-wrapper {
+    transform: translate(-25px, -25px);
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper > div {
+    min-width: 32rem;
+  }
   section.section_hero .hero_heading-container .hero-heading.nachhaltige,
   section.section_hero .hero_heading-container .hero-heading.mobilitat {
     font-size: 13rem;

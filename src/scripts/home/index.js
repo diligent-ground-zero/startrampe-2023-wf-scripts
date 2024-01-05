@@ -3,6 +3,7 @@ import { Manipulation, Autoplay, Pagination } from 'swiper/modules';
 import { animate, stagger, spring } from 'motion';
 
 import 'swiper/css';
+import { d } from '../../../dist/assets/swiper-16840e4b';
 
 export const initAnimations = () => {
   //animate(".hero_heading-container .hero-heading", { offsetDistance: "100%"}, { delay: stagger(1)})
@@ -70,30 +71,29 @@ export const initSwipers = () => {
   }
 
   if (window.matchMedia('(min-width: 992px)').matches) {
-    let previousActiveSlideIndex = undefined;
-
     const swiper = new Swiper('section.section_was_wir_tun .swiper-container', {
       modules: [Manipulation, Pagination, Autoplay],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
-      autoplay: {
-        delay: 5000,
-        pauseOnMouseEnter: true,
-      },
+      initialSlide: 2,
+      // autoplay: {
+      //   delay: 5000,
+      //   pauseOnMouseEnter: true,
+      // },
+      speed: 1200,
+      effect: 'fade',
       breakpoints: {
         992: {
-          initialSlide: 1,
           slidesOffsetBefore: -250,
+          slidesPerView: 3,
         },
         1280: {
-          initialSlide: 1,
-          slidesPerView: 3.5,
+          slidesPerView: 3,
           centeredSlides: true,
           spaceBetween: 25,
         },
         1440: {
-          initialSlide: 1,
           slidesPerView: 4,
           centeredSlides: true,
           spaceBetween: 25,
@@ -101,43 +101,38 @@ export const initSwipers = () => {
       },
     });
 
-    swiper.on('click', (swiper, event) => {
-      let currentSlide = swiper.slides[swiper.clickedIndex];
-      let newSlide = document.createElement('div');
-      newSlide.classList.add('swiper-slide');
-      newSlide.dataset.dynamic = true; // Add custom attribute to new slides
+    let previousClickedIndex = null;
 
-      // Remove 'open' data attribute from all slides
-      swiper.slides.forEach((slide) => {
-        delete slide.dataset.open;
-      });
+    swiper.on('click', (swiper, _event) => {
+      let clickedIndex = swiper.clickedIndex;
+      let currentSlide = swiper.slides[clickedIndex];
 
-      if (previousActiveSlideIndex === undefined) {
-        currentSlide.dataset.open = true;
-        swiper.addSlide(swiper.clickedIndex + 1, newSlide);
-        swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
-      } else if (previousActiveSlideIndex === swiper.clickedIndex) {
-        if (swiper.slides[swiper.clickedIndex + 1]?.dataset.dynamic) {
-          // Check for custom attribute before removing
-          swiper.removeSlide(swiper.clickedIndex + 1);
+      // If the clicked slide is the same as the previously clicked slide, toggle its margin and 'open' attribute
+      if (previousClickedIndex === clickedIndex) {
+        if (currentSlide.dataset.open) {
+          currentSlide.style.marginRight = '0px';
+          delete currentSlide.dataset.open;
         } else {
+          currentSlide.style.marginRight = '25%';
           currentSlide.dataset.open = true;
-          swiper.addSlide(swiper.clickedIndex + 1, newSlide);
-          swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
         }
       } else {
-        if (
-          swiper.slides[previousActiveSlideIndex + 1] &&
-          swiper.slides[previousActiveSlideIndex + 1].dataset.dynamic
-        ) {
-          // Check for custom attribute before removing
-          swiper.removeSlide(previousActiveSlideIndex + 1);
-        }
+        // Remove 'open' data attribute and reset margin from all slides
+        swiper.slides.forEach((slide) => {
+          delete slide.dataset.open;
+          slide.style.marginRight = '0px'; // Reset margin
+        });
+
+        // Add margin and 'open' attribute to the clicked slide
+        currentSlide.style.marginRight = '25%';
         currentSlide.dataset.open = true;
-        swiper.addSlide(swiper.clickedIndex + 1, newSlide);
-        swiper.slideTo(swiper.clickedIndex); // Navigate to the newly added slide
       }
-      previousActiveSlideIndex = swiper.clickedIndex;
+
+      swiper.updateSlidesClasses();
+      swiper.slideTo(clickedIndex);
+
+      // Update the previously clicked slide index
+      previousClickedIndex = clickedIndex;
     });
   }
 };

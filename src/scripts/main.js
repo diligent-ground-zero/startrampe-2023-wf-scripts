@@ -5,6 +5,6 @@ import { initAnimations, initSwipers } from './home';
 
 document.addEventListener('DOMContentLoaded', () => {
   globalScripts();
-  //initSwipers()
+  initSwipers();
   //initAnimations()
 });
