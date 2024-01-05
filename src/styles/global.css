@@ -3,6 +3,11 @@
   --startrampe-easing-fuction: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
+/* .hero_heading-container .hero-heading {
+  offset-path: path("M0.581055 189.354L1435.65 0.772949");
+  offset-position: -50%;
+} */
+
 .navbar {
   background: unset;
 }
@@ -526,35 +531,6 @@ section.section_unser_team
   div.section_wer_wir_sind,
   section.section_wer_wir_sind {
     overflow: hidden;
-  }
-
-  .swiper-scroller {
-    display: flex;
-    justify-content: center;
-    padding-top: 4rem;
-  }
-
-  .swiper-scroller.hidden {
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  .swiper-scroller .swiper-pagination-bullet {
-    border-radius: 50%;
-    width: 0.8em;
-    height: 0.8em;
-    cursor: pointer;
-    background-color: white;
-    margin: 0 5px 0.5em;
-    transition:
-      background-color 0.1s,
-      color 0.1s;
-    display: inline-block;
-    position: relative;
-  }
-
-  .swiper-scroller .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: var(--green);
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper {

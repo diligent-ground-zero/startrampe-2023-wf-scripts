@@ -1,5 +1,6 @@
-import { initSwipers } from './index';
+import { initAnimations, initSwipers } from './index';
 
 document.addEventListener('DOMContentLoaded', () => {
   initSwipers();
+  initAnimations();
 });
