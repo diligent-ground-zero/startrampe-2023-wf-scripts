@@ -123,7 +123,6 @@ export const initSwipers = () => {
         currentSlide.style.marginRight = '25%';
         currentSlide.dataset.open = true;
       }
-
       swiper.updateSlidesClasses();
       swiper.slideTo(clickedIndex);
 
