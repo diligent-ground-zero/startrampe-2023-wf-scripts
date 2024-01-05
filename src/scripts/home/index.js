@@ -7,7 +7,7 @@ export const initSwipers = () => {
 
   const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
     modules: [Manipulation],
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     allowTouchMove: true,
     centeredSlides: true,
     initialSlide: 10,
@@ -34,6 +34,7 @@ export const initSwipers = () => {
         spaceBetween: 100,
       },
       1440: {
+        slidesPerView: 6.5,
         spaceBetween: 200,
       },
     },
