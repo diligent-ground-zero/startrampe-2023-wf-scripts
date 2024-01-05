@@ -2,10 +2,6 @@ import Swiper from 'swiper';
 import { Manipulation, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
-export const initAnimations = () => {
-  //animate(".hero_heading-container .hero-heading", { offsetDistance: "100%"}, { delay: stagger(1)})
-};
-
 export const initSwipers = () => {
   const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
 
