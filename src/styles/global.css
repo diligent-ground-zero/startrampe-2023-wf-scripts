@@ -445,9 +445,17 @@ section.section_unser_team
   }
 }
 @media (min-width: 768px) {
-  .startrampe_heading_group_text .heading-style-h2.clipped {
+  .startrampe_heading_group_text .heading-style-h2.clipped.das-team {
     clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    line-height: 3.2rem;
   }
+  .startrampe_heading_group_text .heading-style-h2.clipped {
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  }
+  .startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind {
+    clip-path: polygon(0 0, 100% 0%, 100% 65%, 0% 100%);
+  }
+
   section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next,
   section.section_unser_team .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev {
     align-items: center;
@@ -775,9 +783,17 @@ section.section_unser_team
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide.crowd-ideation .wwt-slide_image-wrapper {
     transform: translate(-25px, -25px);
   }
+  .startrampe_heading_group_text .heading-style-h2.clipped.das-team {
+    line-height: 4.8rem;
+  }
 }
 
 @media (min-width: 1280px) {
+  .startrampe_heading_group_text .heading-style-h2.clipped.das-team {
+    clip-path: polygon(0 0, 100% 0%, 100% 65%, 0% 100%);
+    line-height: 4.8rem;
+  }
+
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
     transform: translate(-75px, -25px);
   }
