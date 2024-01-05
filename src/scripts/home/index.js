@@ -1,9 +1,6 @@
 import Swiper from 'swiper';
 import { Manipulation, Autoplay, Pagination } from 'swiper/modules';
-import { animate, stagger, spring } from 'motion';
-
 import 'swiper/css';
-import { d } from '../../../dist/assets/swiper-16840e4b';
 
 export const initAnimations = () => {
   //animate(".hero_heading-container .hero-heading", { offsetDistance: "100%"}, { delay: stagger(1)})
