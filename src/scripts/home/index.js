@@ -5,40 +5,55 @@ import 'swiper/css';
 export const initSwipers = () => {
   const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
 
+
+  const dasTeamSwiper = document.querySelector('section.section_unser_team .swiper-container .swiper-wrapper');
+
+
+  // const slides = Array.from(dasTeamSwiper.querySelectorAll('.swiper-slide'));
+
+  // slides.forEach(slide => {
+  //   console.log(slide);
+  //   const clonedSlide = slide.cloneNode(true);
+  //   dasTeamSwiper.appendChild(clonedSlide);
+  // });
+
   const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
     modules: [Manipulation],
     slidesPerView: 'auto',
-    allowTouchMove: true,
     centeredSlides: true,
+    loop: true,
     initialSlide: 10,
     slideToClickedSlide: true,
-    spaceBetween: 0,
+    updateOnWindowResize: true,
+    speed: 800,
     breakpoints: {
-      420: {
-        spaceBetween: 0,
-        slidesPerView: 3,
+      375: {
+        slidesPerView: 'auto',
+        spaceBetween:0,
+        centeredSlides: true,
       },
-      620: {
-        spaceBetween: 50,
-        slidesPerView: 3,
-      },
-      768: {
-        spaceBetween: 25,
-        slidesPerView: 3,
-      },
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 50,
+      980: {
+        slidesPerView: 2.5,
+        spaceBetween:50,
+        loopAdditionalSlides: 2,
       },
       1280: {
-        spaceBetween: 100,
+        slidesPerView: 2.5,
+        spaceBetween:25,
       },
       1440: {
-        slidesPerView: 6.5,
-        spaceBetween: 200,
+        slidesPerView: 2.5,
+        spaceBetween:100,
+        loopAdditionalSlides: 4,
       },
-    },
+      1640: {
+        slidesPerView: 'auto',
+        spaceBetween:50,
+        loopAdditionalSlides: 4,
+      }
+    }
   });
+
 
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
@@ -72,6 +87,7 @@ export const initSwipers = () => {
       allowTouchMove: true,
       initialSlide: 2,
       spaceBetween: 25,
+      updateOnWindowResize: true,
       autoplay: {
         delay: 4000,
         pauseOnMouseEnter: true,
