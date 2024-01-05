@@ -562,7 +562,7 @@ section.section_unser_team
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
-    transform: translateX(85%);
+    transform: translateX(95%);
     position: absolute;
   }
 

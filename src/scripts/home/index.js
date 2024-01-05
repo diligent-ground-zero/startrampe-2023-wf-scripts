@@ -70,11 +70,12 @@ export const initSwipers = () => {
       centeredSlides: true,
       allowTouchMove: true,
       initialSlide: 2,
-      // autoplay: {
-      //   delay: 5000,
-      //   pauseOnMouseEnter: true,
-      // },
-      speed: 1200,
+      spaceBetween: 25,
+      autoplay: {
+        delay: 4000,
+        pauseOnMouseEnter: true,
+      },
+      speed: 800,
       effect: 'fade',
       breakpoints: {
         992: {
@@ -84,12 +85,14 @@ export const initSwipers = () => {
         1280: {
           slidesPerView: 3,
           centeredSlides: true,
-          spaceBetween: 25,
         },
         1440: {
+          slidesPerView: 3.5,
+          centeredSlides: true,
+        },
+        1560: {
           slidesPerView: 4,
           centeredSlides: true,
-          spaceBetween: 25,
         },
       },
     });
@@ -103,7 +106,7 @@ export const initSwipers = () => {
       // If the clicked slide is the same as the previously clicked slide, toggle its margin and 'open' attribute
       if (previousClickedIndex === clickedIndex) {
         if (currentSlide.dataset.open) {
-          currentSlide.style.marginRight = '0px';
+          currentSlide.style.marginRight = '25px';
           delete currentSlide.dataset.open;
         } else {
           currentSlide.style.marginRight = '25%';
@@ -113,7 +116,7 @@ export const initSwipers = () => {
         // Remove 'open' data attribute and reset margin from all slides
         swiper.slides.forEach((slide) => {
           delete slide.dataset.open;
-          slide.style.marginRight = '0px'; // Reset margin
+          slide.style.marginRight = '25px'; // Reset margin
         });
 
         // Add margin and 'open' attribute to the clicked slide
