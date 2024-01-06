@@ -5,9 +5,7 @@ import 'swiper/css';
 export const initSwipers = () => {
   const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
 
-
   const dasTeamSwiper = document.querySelector('section.section_unser_team .swiper-container .swiper-wrapper');
-
 
   // const slides = Array.from(dasTeamSwiper.querySelectorAll('.swiper-slide'));
 
@@ -25,35 +23,35 @@ export const initSwipers = () => {
     initialSlide: 10,
     slideToClickedSlide: true,
     updateOnWindowResize: true,
+    spaceBetween: 0,
     speed: 800,
+    autoHeight: false,
     breakpoints: {
       375: {
         slidesPerView: 'auto',
-        spaceBetween:0,
-        centeredSlides: true,
+        spaceBetween: 0,
       },
       980: {
         slidesPerView: 2.5,
-        spaceBetween:50,
+        spaceBetween: 50,
         loopAdditionalSlides: 2,
       },
       1280: {
         slidesPerView: 2.5,
-        spaceBetween:25,
+        spaceBetween: 25,
       },
       1440: {
         slidesPerView: 2.5,
-        spaceBetween:100,
+        spaceBetween: 100,
         loopAdditionalSlides: 4,
       },
       1640: {
         slidesPerView: 'auto',
-        spaceBetween:50,
+        spaceBetween: 50,
         loopAdditionalSlides: 4,
-      }
-    }
+      },
+    },
   });
-
 
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;

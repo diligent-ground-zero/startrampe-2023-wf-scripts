@@ -289,71 +289,46 @@ section.section_unsere-geschaftfelder
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
 }
 
-
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide {
   width: 20rem;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide.swiper-slide-active {
   width: 18rem;
   justify-content: space-between;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-image-wrap-preview {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
   position: relative;
   width: 12rem;
-  inset: auto ;
+  inset: auto;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-text-wrap,
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-image-wrap {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-text-wrap,
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap {
   display: none;
   gap: 0;
   flex-basis: 200px;
 }
 
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-image-wrap-preview {
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-image-wrap-preview {
   display: none;
 }
 
-.section_unser_team
-.swiper-container {
+.section_unser_team .swiper-container {
   width: 100%;
   display: block;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team {
+.section_unser_team .swiper-container .swiper-wrapper.team {
   width: 100%;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide {
   width: 10rem;
   display: flex;
   justify-content: center;
@@ -361,33 +336,26 @@ section.section_unsere-geschaftfelder
   height: 100%;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-image-wrap-preview {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
   width: 8rem;
 }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active {
+.section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide.swiper-slide-active {
   gap: 0;
   width: 20rem;
   justify-content: center;
 }
 
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap,
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap,
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-image-wrap {
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-image-wrap {
   flex-shrink: 1;
   height: 100%;
   display: flex;
@@ -397,40 +365,39 @@ section.section_unsere-geschaftfelder
 }
 
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap,
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap,
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap{
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap {
   transform: translate(150px);
   flex-basis: 400px;
 }
 
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap {
-  padding: 8rem 0;
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap {
+  padding: 2rem 0;
   align-self: stretch;
-  justify-self:flex-end;
+  justify-self: flex-end;
 }
 
-
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap,
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap,
 .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap{
+  .swiper-container
+  .swiper-wrapper.team
+  .swiper-slide.swiper-slide-active
+  .swiper-slide-team-text-wrap {
   transform: translate(0px);
 }
 
@@ -440,61 +407,51 @@ section.section_unsere-geschaftfelder
   }
 }
 @media (min-width: 768px) {
+  .section_unser_team
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap {
+    padding: 8rem 0;
+  }
 
   .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap,
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-image-wrap {
-  transform: translateX(-150px);
-}
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap,
   .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-image-wrap-preview {
-  width: 8rem;
-}
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-image-wrap {
+    transform: translateX(-150px);
+  }
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
+    width: 8rem;
+  }
 
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active {
-  width: 20rem;
-}
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide.swiper-slide-active {
+    width: 20rem;
+  }
 
   .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap,
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide.swiper-slide-active
-.swiper-slide-team-text-wrap{
-  transform: translate(75px);
-}
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap,
+  .section_unser_team
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap {
+    transform: translate(75px);
+  }
 
-
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-text-wrap,
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-image-wrap {
-  flex-basis: 300px;
-}
-
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-text-wrap,
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap {
+    flex-basis: 300px;
+  }
 
   .startrampe_heading_group_text .heading-style-h2.clipped {
     clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
@@ -514,12 +471,7 @@ section.section_unsere-geschaftfelder
 }
 
 @media (min-width: 992px) {
-
-  .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide
-  .swiper-slide-team-image-wrap-preview {
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
     width: 10rem;
   }
 
@@ -914,35 +866,25 @@ section.section_unsere-geschaftfelder
   } */
 
   .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active
-  .swiper-slide-team-text-wrap,
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap,
   .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active
-  .swiper-slide-team-text-wrap{
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap {
     transform: translate(125px);
   }
 
-
-  .section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-text-wrap,
-.section_unser_team
-.swiper-container
-.swiper-wrapper.team
-.swiper-slide
-.swiper-slide-team-image-wrap {
-  flex-basis: 350px;
-}
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-text-wrap,
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap {
+    flex-basis: 350px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-
   section.section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
     clip-path: polygon(0 100%, 5% 100%, 100% 73%, 100% 0, 0 0);
   }
@@ -959,41 +901,30 @@ section.section_unsere-geschaftfelder
     line-height: 1.1;
   }
 
-
   .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active
-  .swiper-slide-team-text-wrap,
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap,
   .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active
-  .swiper-slide-team-text-wrap{
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap {
     transform: translate(75px);
   }
 }
 
 @media screen and (min-width: 1640px) {
-  .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide {
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide {
     width: 25rem;
   }
 
-  .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide
-  .swiper-slide-team-image-wrap-preview {
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
     width: 14rem;
   }
 
-  .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active {
+  .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide.swiper-slide-active {
     width: 70rem;
   }
 }
