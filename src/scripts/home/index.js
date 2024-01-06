@@ -15,7 +15,7 @@ export const initSwipers = () => {
     slideToClickedSlide: true,
     updateOnWindowResize: true,
     spaceBetween: 0,
-    initialSlide:10,
+    initialSlide: 10,
     speed: 800,
     autoHeight: false,
     breakpoints: {

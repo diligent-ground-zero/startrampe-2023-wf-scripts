@@ -518,11 +518,9 @@ section.section_unsere-geschaftfelder
     clip-path: polygon(0 100%, 5% 100%, 100% 73%, 100% 0, 0 0);
   }
 
-  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item{
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
     clip-path: polygon(0 100%, 42% 100%, 100% 70%, 100% 0, 0 0);
   }
-
-
 
   .section_unser_team
     .swiper-container
@@ -727,7 +725,7 @@ section.section_unsere-geschaftfelder
     .geschaft-slider_mask
     .geschaft-slider_slide
     .geschaft_slide-container
-    h4 {
+    h3 {
     transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
   }
 
@@ -745,7 +743,7 @@ section.section_unsere-geschaftfelder
     .geschaft-slider_mask
     .geschaft-slider_slide:hover
     .geschaft_slide-container
-    h4 {
+    h3 {
     clip-path: polygon(50% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
   }
 
