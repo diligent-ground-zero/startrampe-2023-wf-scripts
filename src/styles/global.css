@@ -73,7 +73,7 @@ section.section_unsere-geschaftfelder
   .geschaft-slider_slide
   .geschaft_slide-container
   h4 {
-  clip-path: polygon(30% 100%, 100% 55%, 100% 0, 0 0, 0 100%);
+  clip-path: polygon(10% 100%, 100% 55%, 100% 0, 0 0, 0 100%);
 }
 
 .startrampe_heading_group_text .heading-style-h2.clipped {
@@ -515,11 +515,12 @@ section.section_unsere-geschaftfelder
   }
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
-    clip-path: polygon(0 100%, 5% 100%, 100% 73%, 100% 0, 0 0);
+    /* clip-path: polygon(0 100%, 5% 100%, 100% 73%, 100% 0, 0 0); */
+    clip-path: unset;
   }
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
-    clip-path: polygon(0 100%, 42% 100%, 100% 70%, 100% 0, 0 0);
+    clip-path: polygon(0 100%, 20% 100%, 100% 60%, 100% 0, 0 0);
   }
 
   .section_unser_team
@@ -725,7 +726,7 @@ section.section_unsere-geschaftfelder
     .geschaft-slider_mask
     .geschaft-slider_slide
     .geschaft_slide-container
-    h3 {
+    h4 {
     transition: clip-path var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 0.2s;
   }
 
@@ -743,7 +744,7 @@ section.section_unsere-geschaftfelder
     .geschaft-slider_mask
     .geschaft-slider_slide:hover
     .geschaft_slide-container
-    h3 {
+    h4 {
     clip-path: polygon(50% 100%, 100% 100%, 100% 0, 0 0, 0 100%);
   }
 
