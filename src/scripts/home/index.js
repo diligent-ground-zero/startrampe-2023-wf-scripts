@@ -5,19 +5,9 @@ import 'swiper/css';
 export const initSwipers = () => {
   const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
 
-  const dasTeamSwiper = document.querySelector('section.section_unser_team .swiper-container .swiper-wrapper');
-
-  // const slides = Array.from(dasTeamSwiper.querySelectorAll('.swiper-slide'));
-
-  // slides.forEach(slide => {
-  //   console.log(slide);
-  //   const clonedSlide = slide.cloneNode(true);
-  //   dasTeamSwiper.appendChild(clonedSlide);
-  // });
-
   const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
     modules: [Manipulation],
-    slidesPerView: 2.5,
+    slidesPerView: 1.5,
     centeredSlides: true,
     loop: true,
     slideToClickedSlide: true,
