@@ -339,7 +339,6 @@ section.section_unsere-geschaftfelder
   justify-content: flex-end;
   align-items: center;
   height: auto;
-  top: 10%;
 }
 
 .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
@@ -540,10 +539,22 @@ section.section_unsere-geschaftfelder
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
     justify-content: space-between;
+    padding: 8rem 0;
   }
 }
 
 @media (min-width: 992px) {
+  .section_unser_team
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-image-wrap {
+    flex-shrink: 0.4;
+    max-width: none;
+    padding: 0;
+    flex: 1 0.2 220px;
+  }
+
   .section_unser_team
     .swiper-container
     .swiper-wrapper.team
@@ -838,7 +849,7 @@ section.section_unsere-geschaftfelder
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-image-wrap {
-    flex: 1 0.2 220px;
+    flex: 1 0.1 280px;
   }
 }
 
@@ -863,13 +874,9 @@ section.section_unsere-geschaftfelder
     .swiper-container
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
-    .swiper-slide-team-text-wrap,
-  .section_unser_team
-    .swiper-container
-    .swiper-wrapper.team
-    .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
     transform: translate(150px);
+    padding: 10rem 0;
   }
 
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap {
@@ -877,14 +884,6 @@ section.section_unsere-geschaftfelder
   }
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide.swiper-slide-active {
     width: 50rem;
-  }
-
-  .section_unser_team
-    .swiper-container
-    .swiper-wrapper.team
-    .swiper-slide.swiper-slide-active
-    .swiper-slide-team-text-wrap {
-    padding: 10rem 0;
   }
 }
 
@@ -906,7 +905,7 @@ section.section_unsere-geschaftfelder
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-image-wrap {
-    flex: 1 0.5 240px;
+    flex: 1 0.3 260px;
   }
 
   .section_unser_team
@@ -914,6 +913,7 @@ section.section_unsere-geschaftfelder
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
-    transform: translate(0);
+    transform: translateX(150px);
+    padding: 10rem 0;
   }
 }

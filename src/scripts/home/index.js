@@ -9,14 +9,14 @@ export const initSwipers = () => {
     modules: [Manipulation],
     centeredSlides: true,
     slidesPerView: 2,
-    loopAdditionalSlides: 2,
     allowTouchMove: false,
     loop: true,
     slideToClickedSlide: true,
     updateOnWindowResize: true,
     spaceBetween: 0,
+    loopAdditionalSlides: 2,
     initialSlide: 10,
-    speed: 800,
+    speed: 400,
     autoHeight: false,
     breakpoints: {
       768: {
@@ -26,22 +26,35 @@ export const initSwipers = () => {
       },
       1280: {
         slidesPerView: 3,
-        spaceBetween: 25,
-        loopAdditionalSlides: 3,
+        spaceBetween: 100,
+        loopAdditionalSlides: 2,
       },
       1440: {
-        slidesPerView: 2.5,
+        slidesPerView: 3,
         spaceBetween: 100,
         loopAdditionalSlides: 2,
       },
       1640: {
-        slidesPerView: 'auto',
-        spaceBetween: 25,
+        slidesPerView: 3.5,
+        spaceBetween: 100,
         loopAdditionalSlides: 3,
       },
     },
   });
 
+  // swiperTeam.on('click', (swiper, _event) => {
+  //   swiper.updateSize();
+  // });
+
+  swiperTeam.on('beforeSlideChangeStart', (swiper) => {
+    console.log(swiper);
+    swiper.el.classList.add('swiping');
+    swiper.updateSize();
+  });
+
+  swiperTeam.on('transitionEnd', (swiper) => {
+    swiper.el.classList.remove('swiping');
+  });
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
 
