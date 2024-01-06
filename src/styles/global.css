@@ -515,8 +515,14 @@ section.section_unsere-geschaftfelder
   }
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
-    clip-path: unset;
+    clip-path: polygon(0 100%, 5% 100%, 100% 73%, 100% 0, 0 0);
   }
+
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item{
+    clip-path: polygon(0 100%, 42% 100%, 100% 70%, 100% 0, 0 0);
+  }
+
+
 
   .section_unser_team
     .swiper-container
