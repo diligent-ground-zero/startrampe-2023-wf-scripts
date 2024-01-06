@@ -17,21 +17,18 @@ export const initSwipers = () => {
 
   const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
     modules: [Manipulation],
-    slidesPerView: 'auto',
+    slidesPerView: 2.5,
     centeredSlides: true,
     loop: true,
-    initialSlide: 10,
     slideToClickedSlide: true,
     updateOnWindowResize: true,
     spaceBetween: 0,
+    loopAdditionalSlides: 2,
     speed: 800,
     autoHeight: false,
     breakpoints: {
-      375: {
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-      },
-      980: {
+      768: {
+        initialSlide: 10,
         slidesPerView: 2.5,
         spaceBetween: 50,
         loopAdditionalSlides: 2,
