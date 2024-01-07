@@ -32,7 +32,7 @@ export const initSwipers = () => {
       },
       1440: {
         slidesPerView: 3,
-        spaceBetween: 100,
+        spaceBetween: 25,
         loopAdditionalSlides: 2,
       },
       1640: {
@@ -43,12 +43,7 @@ export const initSwipers = () => {
     },
   });
 
-  // swiperTeam.on('click', (swiper, _event) => {
-  //   swiper.updateSize();
-  // });
-
   swiperTeam.on('beforeSlideChangeStart', (swiper) => {
-    swiper.el.classList.add('swiping');
     swiper.updateSize();
   });
 
