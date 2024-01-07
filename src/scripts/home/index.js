@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Manipulation, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import { timeline } from 'motion';
+import { timeline, inView } from 'motion';
 
 export const initSwipers = () => {
   const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
@@ -223,4 +223,30 @@ export const initAnimations = () => {
   }
 
   timeline(sequence, { duration: 3.5, easingAndDuration });
+
+  inView('section.section_wer_wir_sind', ({ target }) => {
+    const sequence = [
+      [
+        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-1'),
+        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-5deg)'] },
+        { duration: 1, at: '-0.5' },
+      ],
+      [
+        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-2'),
+        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-7.5deg)'] },
+        { duration: 1, at: '-0.5' },
+      ],
+      [
+        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-3'),
+        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-8.5deg)'] },
+        { duration: 1, at: '-0.5' },
+      ],
+      [
+        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-4'),
+        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-10deg)'] },
+        { duration: 1, at: '-0.5' },
+      ],
+    ];
+    timeline(sequence, { easingAndDuration });
+  });
 };

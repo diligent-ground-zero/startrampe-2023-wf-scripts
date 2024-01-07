@@ -63,6 +63,9 @@
 
 .navbar.scrolled.crossed-second-page-section.menu-open
   .navbar_button-menu-button-wrapper
+  .navbar_button-menu-button-hamburger-toggle,
+.navbar.scrolled.crossed-second-page-section.menu-open
+  .navbar_button-menu-button-wrapper
   .navbar_button-menu-button-hamburger-toggle::before {
   background-color: unset;
 }
@@ -184,6 +187,10 @@ section.section_unsere-geschaftfelder
 }
 
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper .wwt-slide_description {
+  opacity: 0;
+}
+
+.section_wer_wir_sind .x-images-wrapper .x-wws-image-wrapper {
   opacity: 0;
 }
 
@@ -584,6 +591,10 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
     clip-path: polygon(0 100%, 20% 100%, 100% 60%, 100% 0, 0 0);
+  }
+
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover {
+    clip-path: unset;
   }
 
   .section_unser_team

@@ -2,7 +2,7 @@ export const globalScripts = () => {
   const headerContainer = document.querySelector('.navbar');
   //create a function that listents to the scroll event, and adds a class to the header if the page is scrolled down
   const handleScroll = () => {
-    if (window.scrollY > 0) {
+    if (window.scrollY > headerContainer.offsetHeight) {
       headerContainer.classList.add('scrolled');
     } else {
       headerContainer.classList.remove('scrolled');
@@ -27,11 +27,6 @@ export const globalScripts = () => {
   const pageSections = document.querySelectorAll('main.main-wrapper section');
   const secondSection = pageSections[1];
 
-  console.log();
-  if (window.scrollY > secondSection.offsetTop) {
-    headerContainer.classList.add('crossed-second-page-section');
-  }
-
   const observerOptions = {
     rootMargin: '50% 0px -75% 0px',
     threshold: [0.5],
@@ -53,8 +48,18 @@ export const globalScripts = () => {
       }
     });
   };
+
   const interesctionObserver = new IntersectionObserver(observerCallback, observerOptions);
   interesctionObserver.observe(secondSection);
+
+  //start after intersection obeserver first observes the second section
+  setTimeout(() => {
+    const scrollPositionRelativeToSecondSection = window.scrollY - secondSection.offsetTop;
+    if (scrollPositionRelativeToSecondSection > secondSection.offsetHeight) {
+      headerContainer.classList.add('crossed-second-page-section');
+      console.log('add class');
+    }
+  }, 1);
 
   //add a mutation observer to the .navbar_menu-button.w-nav-button element so when the elements has the class .w--open it should do smt
   const menuButton = document.querySelector('.w-nav-button');
