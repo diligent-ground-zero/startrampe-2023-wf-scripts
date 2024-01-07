@@ -57,7 +57,6 @@ export const globalScripts = () => {
     const scrollPositionRelativeToSecondSection = window.scrollY - secondSection.offsetTop;
     if (scrollPositionRelativeToSecondSection > secondSection.offsetHeight) {
       headerContainer.classList.add('crossed-second-page-section');
-      console.log('add class');
     }
   }, 1);
 
