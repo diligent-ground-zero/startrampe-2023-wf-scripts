@@ -5,13 +5,69 @@
 
 .navbar {
   background: unset;
+  transition: background-color var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
 }
 
 .navbar.scrolled {
   background-color: var(--black);
 }
 
-.navbar.menu-open {
+.navbar .navbar_brand-link,
+.navbar.scrolled .navbar-container .navbar_brand-link .navbar-brand_on-start .navbar-brand_on-start-logo-side-text {
+  transition: opacity var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+
+.navbar.scrolled.crossed-second-page-section
+  .navbar-container
+  .navbar_brand-link
+  .navbar-brand_on-start
+  .navbar-brand_on-start-logo-side-text {
+  opacity: 0;
+}
+
+.navbar.scrolled.crossed-second-page-section {
+  background-color: transparent;
+}
+
+.navbar.scrolled.crossed-second-page-section .navbar_brand-link,
+.navbar.scrolled.crossed-second-page-section .navbar_button-menu-button-wrapper .button {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.navbar.scrolled.crossed-second-page-section
+  .navbar_button-menu-button-wrapper
+  .navbar_button-menu-button-hamburger-toggle::before {
+  content: '';
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-color: black;
+  width: 7rem;
+  height: 6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar.scrolled.crossed-second-page-section.menu-open {
+  background-color: var(--black);
+  transition: background-color 0.5s var(--startrampe-easing-fuction);
+}
+
+.navbar.scrolled.crossed-second-page-section.menu-open .navbar_brand-link,
+.navbar.scrolled.crossed-second-page-section.menu-open .navbar_button-menu-button-wrapper .button {
+  pointer-events: auto;
+  opacity: 100;
+}
+
+.navbar.scrolled.crossed-second-page-section.menu-open
+  .navbar_button-menu-button-wrapper
+  .navbar_button-menu-button-hamburger-toggle::before {
+  background-color: unset;
+}
+
+.navbar.menu-open.scrolled {
   background-color: var(--black);
 }
 
@@ -339,6 +395,7 @@ section.section_unsere-geschaftfelder
   justify-content: flex-end;
   align-items: center;
   height: auto;
+  top: 10%;
 }
 
 .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
@@ -417,6 +474,13 @@ section.section_unsere-geschaftfelder
   padding: 0;
   flex-shrink: 1;
   margin-left: -2rem;
+}
+
+section.section_hero .hero_heading-container .hero-heading.nachhaltige,
+section.section_hero .hero_heading-container .hero-heading.mobilitat,
+section.section_hero .hero_heading-container .hero-heading.hero-heading,
+section.section_hero .hero_heading-container .hero-heading.an-den-star {
+  opacity: 0;
 }
 
 @media (min-width: 620px) {
@@ -539,20 +603,15 @@ section.section_unsere-geschaftfelder
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
     justify-content: space-between;
-    padding: 8rem 0;
   }
 }
 
 @media (min-width: 992px) {
-  .section_unser_team
-    .swiper-container
-    .swiper-wrapper.team
-    .swiper-slide.swiper-slide-active
-    .swiper-slide-team-image-wrap {
-    flex-shrink: 0.4;
-    max-width: none;
-    padding: 0;
-    flex: 1 0.2 220px;
+  .navbar.scrolled.crossed-second-page-section
+    .navbar_button-menu-button-wrapper
+    .navbar_button-menu-button-hamburger-toggle::before {
+    width: 9rem;
+    height: 7.5rem;
   }
 
   .section_unser_team
@@ -849,7 +908,7 @@ section.section_unsere-geschaftfelder
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-image-wrap {
-    flex: 1 0.1 280px;
+    flex: 1 0.2 220px;
   }
 }
 
@@ -874,9 +933,13 @@ section.section_unsere-geschaftfelder
     .swiper-container
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap,
+  .section_unser_team
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
     transform: translate(150px);
-    padding: 10rem 0;
   }
 
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap {
@@ -884,6 +947,14 @@ section.section_unsere-geschaftfelder
   }
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide.swiper-slide-active {
     width: 50rem;
+  }
+
+  .section_unser_team
+    .swiper-container
+    .swiper-wrapper.team
+    .swiper-slide.swiper-slide-active
+    .swiper-slide-team-text-wrap {
+    padding: 10rem 0;
   }
 }
 
@@ -905,7 +976,7 @@ section.section_unsere-geschaftfelder
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-image-wrap {
-    flex: 1 0.3 260px;
+    flex: 1 0.5 240px;
   }
 
   .section_unser_team
@@ -914,6 +985,5 @@ section.section_unsere-geschaftfelder
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
     transform: translateX(150px);
-    padding: 10rem 0;
   }
 }

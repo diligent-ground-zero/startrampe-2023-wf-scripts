@@ -1,5 +1,5 @@
 export const globalScripts = () => {
-  const headerContainer = document.querySelector('div.navbar');
+  const headerContainer = document.querySelector('.navbar');
   //create a function that listents to the scroll event, and adds a class to the header if the page is scrolled down
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -24,16 +24,17 @@ export const globalScripts = () => {
   //call the function once on page load
   handleScroll();
 
-  //create an interstection observer that ads a classs tothe header when the top of the page passes the seciont with class section_wer_wir_sind
-  const sectionWerWirSind = document.querySelector('.section_wer_wir_sind');
+  const pageSections = document.querySelectorAll('main.main-wrapper section');
+  const secondSection = pageSections[1];
 
-  if (window.scrollY > sectionWerWirSind.offsetTop) {
-    headerContainer.classList.add('crossed-wer-wir-sind');
+  console.log();
+  if (window.scrollY > secondSection.offsetTop) {
+    headerContainer.classList.add('crossed-second-page-section');
   }
 
   const observerOptions = {
-    rootMargin: '50% 0px 0px 0px',
-    threshold: 1,
+    rootMargin: '50% 0px -75% 0px',
+    threshold: [0.5],
   };
 
   let lastScrollY = window.scrollY;
@@ -46,28 +47,28 @@ export const globalScripts = () => {
       //is intersecting is true when the top of the page passes the section and direction is down
 
       if (entry.isIntersecting && isScrollingDown) {
-        headerContainer.classList.add('crossed-wer-wir-sind');
+        headerContainer.classList.add('crossed-second-page-section');
       } else if (!entry.isIntersecting && !isScrollingDown) {
-        headerContainer.classList.remove('crossed-wer-wir-sind');
+        headerContainer.classList.remove('crossed-second-page-section');
       }
     });
   };
   const interesctionObserver = new IntersectionObserver(observerCallback, observerOptions);
-  interesctionObserver.observe(sectionWerWirSind);
+  interesctionObserver.observe(secondSection);
 
   //add a mutation observer to the .navbar_menu-button.w-nav-button element so when the elements has the class .w--open it should do smt
-  // const menuButton = document.querySelector('.navbar_menu-button.w-nav-button');
-  // const mutationObserver = new MutationObserver(function (mutations) {
-  //   mutations.forEach(function (mutation) {
-  //     if (mutation.attributeName === 'class') {
-  //       if (menuButton.classList.contains('w--open')) {
-  //         headerContainer.classList.add('menu-open');
-  //       } else {
-  //         headerContainer.classList.remove('menu-open');
-  //       }
-  //     }
-  //   });
-  // });
+  const menuButton = document.querySelector('.w-nav-button');
+  const mutationObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.attributeName === 'class') {
+        if (menuButton.classList.contains('w--open')) {
+          headerContainer.classList.add('menu-open');
+        } else {
+          headerContainer.classList.remove('menu-open');
+        }
+      }
+    });
+  });
 
-  // mutationObserver.observe(menuButton, { attributes: true });
+  mutationObserver.observe(menuButton, { attributes: true });
 };
