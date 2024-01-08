@@ -29,6 +29,10 @@
   background-color: transparent;
 }
 
+.navbar.scrolled.crossed-second-page-section.black {
+  filter: invert(1);
+}
+
 .navbar.scrolled.crossed-second-page-section .navbar_brand-link,
 .navbar.scrolled.crossed-second-page-section .navbar_button-menu-button-wrapper .button {
   pointer-events: none;

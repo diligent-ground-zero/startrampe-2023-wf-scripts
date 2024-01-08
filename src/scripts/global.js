@@ -28,7 +28,7 @@ export const globalScripts = () => {
   const secondSection = pageSections[1];
 
   const observerOptions = {
-    rootMargin: '50% 0px -75% 0px',
+    rootMargin: '50% 0px -50% 0px',
     threshold: [0.5],
   };
 
@@ -36,6 +36,13 @@ export const globalScripts = () => {
   let isScrollingDown = false;
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
+      //check if entry has black in classlist
+      if (entry.target.classList.contains('black')) {
+        headerContainer.classList.add('black');
+      } else {
+        headerContainer.classList.remove('black');
+      }
+
       const currentScrollY = window.scrollY;
       isScrollingDown = currentScrollY > lastScrollY;
       lastScrollY = currentScrollY;

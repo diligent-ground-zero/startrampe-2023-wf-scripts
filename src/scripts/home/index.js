@@ -43,13 +43,6 @@ export const initSwipers = () => {
     },
   });
 
-  // swiperTeam.on('beforeSlideChangeStart', (swiper) => {
-  //   swiper.updateSize();
-  // });
-
-  swiperTeam.on('transitionEnd', (swiper) => {
-    swiper.el.classList.remove('swiping');
-  });
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
 
