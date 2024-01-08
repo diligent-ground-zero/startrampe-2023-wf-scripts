@@ -210,7 +210,7 @@ export const initAnimations = () => {
       ],
       [
         '.hero_background-image > img',
-        { opacity: [0, 1], clipPath: ['polygon(0 0, 100% 0, 100% 0, 0 0)', 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'] },
+        { opacity: 1, clipPath: ['polygon(0 0, 100% 0, 100% 0, 0 0)', 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'] },
         { at: '-0.2' },
       ],
       [
@@ -222,7 +222,7 @@ export const initAnimations = () => {
     ];
   }
 
-  timeline(sequence, { duration: 3.5, easingAndDuration });
+  timeline(sequence, { duration: 2.8, easingAndDuration });
 
   inView('section.section_wer_wir_sind', ({ target }) => {
     const sequence = [
@@ -247,6 +247,6 @@ export const initAnimations = () => {
         { duration: 1, at: '-0.5' },
       ],
     ];
-    timeline(sequence, { easingAndDuration });
+    timeline(sequence, { easingAndDuration, delay: 1 });
   });
 };
