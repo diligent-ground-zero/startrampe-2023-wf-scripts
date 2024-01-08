@@ -161,6 +161,10 @@ section.section_unsere-geschaftfelder
   transition: transform var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
 }
 
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] {
+  max-height: unset;
+}
+
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
   position: relative;
 }
@@ -530,7 +534,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
-    padding: 12rem 0;
+    padding: 1rem 0;
   }
 
   .section_unser_team
@@ -609,7 +613,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     flex-shrink: 0.4;
     max-width: none;
     padding: 0;
-    flex: 1 0.2 180px;
+    flex: 1 0.2 200px;
   }
 
   .section_unser_team
@@ -634,7 +638,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
-    padding: 12rem 0;
+    padding: 3rem 0;
   }
 
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
@@ -775,9 +779,6 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     }
   }
 
-  section.section_unser_netzwerk {
-    min-height: 75vh;
-  }
   section.section_unser_netzwerk .netzwerk_grid-element {
     grid-row-gap: 0;
   }
@@ -914,7 +915,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
     transform: translate(150px);
-    padding: 10rem 0;
+    padding: 2rem 0;
   }
 
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap {
@@ -969,7 +970,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
-    padding: 6rem 0;
+    padding: 2rem 0;
   }
 
   .section_unser_team
