@@ -25,7 +25,6 @@ export default defineConfig({
       },
       output: {
         inlineDynamicImports: true,
-        esModule: false,
         compact: true,
         globals: {
           jquery: '$',
