@@ -222,7 +222,7 @@ export const initAnimations = () => {
     ];
   }
 
-  timeline(sequence, { duration: 2.8, easingAndDuration });
+  timeline(sequence, { duration: 3.5, easingAndDuration });
 
   inView('section.section_wer_wir_sind', ({ target }) => {
     const sequence = [
