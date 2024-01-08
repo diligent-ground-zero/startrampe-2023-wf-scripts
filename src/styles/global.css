@@ -353,7 +353,7 @@ section.section_unsere-geschaftfelder
 }
 
 .startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind,
-startrampe_heading_group_text .heading-style-h2.clipped.was-wir-tun {
+.startrampe_heading_group_text .heading-style-h2.clipped.was-wir-tun {
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
 }
 
