@@ -59,13 +59,12 @@ export const globalScripts = () => {
   const interesctionObserver = new IntersectionObserver(observerCallback, observerOptions);
   interesctionObserver.observe(secondSection);
 
-  //start after intersection obeserver first observes the second section
   setTimeout(() => {
     const scrollPositionRelativeToSecondSection = window.scrollY - secondSection.offsetTop;
     if (scrollPositionRelativeToSecondSection > secondSection.offsetHeight) {
       headerContainer.classList.add('crossed-second-page-section');
     }
-  }, 1);
+  }, 250);
 
   //add a mutation observer to the .navbar_menu-button.w-nav-button element so when the elements has the class .w--open it should do smt
   const menuButton = document.querySelector('.w-nav-button');
