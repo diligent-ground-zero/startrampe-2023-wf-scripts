@@ -27,7 +27,7 @@ export const initSwipers = () => {
       },
       1280: {
         slidesPerView: 3,
-        spaceBetween: 100,
+        spaceBetween: 175,
         loopAdditionalSlides: 2,
       },
       1440: {
@@ -43,9 +43,9 @@ export const initSwipers = () => {
     },
   });
 
-  swiperTeam.on('beforeSlideChangeStart', (swiper) => {
-    swiper.updateSize();
-  });
+  // swiperTeam.on('beforeSlideChangeStart', (swiper) => {
+  //   swiper.updateSize();
+  // });
 
   swiperTeam.on('transitionEnd', (swiper) => {
     swiper.el.classList.remove('swiping');

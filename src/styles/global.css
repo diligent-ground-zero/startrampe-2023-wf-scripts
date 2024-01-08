@@ -149,7 +149,7 @@ section.section_unsere-geschaftfelder
   flex-direction: column;
   align-items: center;
   padding: 0;
-  gap: 6rem 0;
+  gap: 3rem 0;
 }
 
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper .wwt-slide_description {
@@ -348,7 +348,8 @@ section.section_unsere-geschaftfelder
   line-height: 3.2rem;
 }
 
-.startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind {
+.startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind,
+startrampe_heading_group_text .heading-style-h2.clipped.was-wir-tun {
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
 }
 
@@ -633,7 +634,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
   }
 
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
-    width: 10rem;
+    width: 8rem;
   }
 
   section.section_hero .hero_heading-container .hero-heading.nachhaltige,
@@ -867,10 +868,10 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
 
 @media (min-width: 1280px) {
   .section_unser_team .swiper-container .swiper-wrapper.team .swiper-slide .swiper-slide-team-image-wrap-preview {
-    width: 8rem;
+    width: 10rem;
   }
   .startrampe_heading_group_text .heading-style-h2.clipped.das-team {
-    clip-path: polygon(0 0, 100% 0%, 100% 65%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 40%, 0% 100%);
     line-height: 4.8rem;
   }
 
@@ -964,7 +965,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-text-wrap {
-    padding: 10rem 0;
+    padding: 6rem 0;
   }
 
   .section_unser_team
@@ -972,7 +973,7 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
     .swiper-wrapper.team
     .swiper-slide.swiper-slide-active
     .swiper-slide-team-image-wrap {
-    flex: 1 0.2 280px;
+    flex: 1 0.2 250px;
   }
 }
 
