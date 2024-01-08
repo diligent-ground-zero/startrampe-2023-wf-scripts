@@ -22,20 +22,19 @@ export default defineConfig({
     // cssCodeSplit:false,
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'src/scripts/home/main.js'),
         main: resolve(__dirname, 'src/scripts/main.js'),
       },
       output: {
-        // format: 'umd',
+        format: 'umd',
         inlineDynamicImports: false,
-        // entryFileNames: 'main.js',
+        entryFileNames: 'main.js',
         esModule: false,
         compact: true,
         globals: {
           jquery: '$',
         },
       },
-      //preserveEntrySignatures: 'exports-only',
+      preserveEntrySignatures: 'exports-only',
       external: ['jquery'],
     },
   },
