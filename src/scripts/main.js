@@ -1,12 +1,19 @@
 import '../styles/global.css';
 
 import { globalScripts } from './global';
-import { initAnimations, initSwipers } from './home';
 
 const init = () => {
   globalScripts();
-  initSwipers();
-  initAnimations();
+  
+
+  //dinamicaly import these scripts only on the home page
+
+if (window.location.pathname === '/') {
+  import('./home').then(module => {
+    module.initSwipers();
+    module.initAnimations();
+  });
+}
 };
 
 if (document.readyState === 'loading') {
