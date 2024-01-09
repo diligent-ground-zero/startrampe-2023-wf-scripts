@@ -17,29 +17,50 @@
   transition: opacity var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
 }
 
+.navbar .navbar-container {
+  transition: height var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+
+.navbar.scrolled.crossed-second-page-section .navbar-container {
+  height: 5rem;
+}
+
+.navbar.scrolled.crossed-second-page-section .navbar-container {
+  height: 5rem;
+}
+
+.navbar .navbar-container .navbar_brand-link .navbar-brand_on-start .navbar-brand_on-start-logo {
+  transition: min-width var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+
 .navbar.scrolled.crossed-second-page-section
   .navbar-container
   .navbar_brand-link
   .navbar-brand_on-start
-  .navbar-brand_on-start-logo-side-text {
-  opacity: 0;
-}
-
-.navbar.scrolled.crossed-second-page-section {
-  background-color: transparent;
-}
-
-.navbar.scrolled.crossed-second-page-section.black {
-  filter: invert(1);
-}
-
-.navbar.scrolled.crossed-second-page-section .navbar_brand-link,
-.navbar.scrolled.crossed-second-page-section .navbar_button-menu-button-wrapper .button {
-  pointer-events: none;
-  opacity: 0;
+  .navbar-brand_on-start-logo {
+  min-width: 8rem;
 }
 
 .navbar.scrolled.crossed-second-page-section
+  .navbar-container
+  .navbar_brand-link
+  .navbar-brand_on-start
+  .navbar-brand_on-start-logo-side-text,
+.navbar.scrolled.crossed-second-page-section.crossed-third-page-section
+  .navbar-container
+  .navbar_brand-link
+  .navbar-brand_on-start
+  .navbar-brand_on-start-logo,
+.navbar.scrolled.crossed-second-page-section .navbar_button-menu-button-wrapper .button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar.scrolled.crossed-second-page-section.crossed-third-page-section {
+  background-color: transparent;
+}
+
+.navbar.scrolled.crossed-second-page-section.crossed-third-page-section
   .navbar_button-menu-button-wrapper
   .navbar_button-menu-button-hamburger-toggle::before {
   content: '';
@@ -48,7 +69,7 @@
   inset: 0;
   background-color: black;
   width: 7rem;
-  height: 6rem;
+  height: 5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -60,7 +81,8 @@
 }
 
 .navbar.scrolled.crossed-second-page-section.menu-open .navbar_brand-link,
-.navbar.scrolled.crossed-second-page-section.menu-open .navbar_button-menu-button-wrapper .button {
+.navbar.scrolled.crossed-second-page-section.menu-open .navbar_button-menu-button-wrapper .button,
+.navbar.scrolled.crossed-second-page-section.menu-open .navbar_button-menu-button-wrapper {
   pointer-events: auto;
   opacity: 100;
 }
@@ -74,10 +96,27 @@
   background-color: unset;
 }
 
+.navbar .navbar_button-menu-button-wrapper {
+  transition: filter var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+
 .navbar.menu-open.scrolled {
   background-color: var(--black);
 }
 
+.navbar.scrolled.crossed-second-page-section.crossed-third-page-section.menu-open
+  .navbar-container
+  .navbar_brand-link
+  .navbar-brand_on-start
+  .navbar-brand_on-start-logo,
+.navbar.scrolled.menu-open
+  .navbar-container
+  .navbar_brand-link
+  .navbar-brand_on-start
+  .navbar-brand_on-start-logo-side-text {
+  pointer-events: auto;
+  opacity: 100;
+}
 
 .utility_heading-section,
 .utility_content-section {

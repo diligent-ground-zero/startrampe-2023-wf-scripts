@@ -4,8 +4,6 @@ import 'swiper/css';
 import { timeline, inView } from 'motion';
 
 export const initSwipers = () => {
-  const wasWirTunSwiper = document.querySelector('section.section_was_wir_tun .swiper-container .swiper-wrapper');
-
   const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
     modules: [Manipulation],
     centeredSlides: true,
@@ -46,9 +44,13 @@ export const initSwipers = () => {
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
 
-    for (let i = 0; i < wasWirTunSwiper.children.length; i++) {
-      wasWirTunSwiper.children[i].addEventListener('click', function () {
-        let currentElement = wasWirTunSwiper.children[i];
+    const wasWirTunSwiperContainer = document.querySelector(
+      'section.section_was_wir_tun .swiper-container .swiper-wrapper',
+    );
+
+    for (let i = 0; i < wasWirTunSwiperContainer.children.length; i++) {
+      wasWirTunSwiperContainer.children[i].addEventListener('click', function () {
+        let currentElement = wasWirTunSwiperContainer.children[i];
 
         if (previousActiveElementIndex === undefined) {
           currentElement.dataset.open = true;
@@ -59,7 +61,7 @@ export const initSwipers = () => {
             currentElement.dataset.open = true;
           }
         } else {
-          delete wasWirTunSwiper.children[previousActiveElementIndex].dataset.open;
+          delete wasWirTunSwiperContainer.children[previousActiveElementIndex].dataset.open;
           currentElement.dataset.open = true;
         }
         previousActiveElementIndex = i;
@@ -80,8 +82,7 @@ export const initSwipers = () => {
         delay: 4000,
         pauseOnMouseEnter: true,
       },
-      speed: 800,
-      effect: 'fade',
+      speed: 900,
       breakpoints: {
         992: {
           slidesOffsetBefore: -250,
@@ -101,6 +102,8 @@ export const initSwipers = () => {
         },
       },
     });
+
+    swiper.autoplay.stop();
 
     let previousClickedIndex = null;
 
@@ -133,6 +136,10 @@ export const initSwipers = () => {
 
       // Update the previously clicked slide index
       previousClickedIndex = clickedIndex;
+    });
+
+    inView(swiper.el, () => {
+      swiper.autoplay.start();
     });
   }
 };
@@ -217,29 +224,33 @@ export const initAnimations = () => {
 
   timeline(sequence, { duration: 3.5, easingAndDuration });
 
-  inView('section.section_wer_wir_sind', ({ target }) => {
-    const sequence = [
-      [
-        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-1'),
-        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-5deg)'] },
-        { duration: 1, at: '-0.5' },
-      ],
-      [
-        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-2'),
-        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-7.5deg)'] },
-        { duration: 1, at: '-0.5' },
-      ],
-      [
-        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-3'),
-        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-8.5deg)'] },
-        { duration: 1, at: '-0.5' },
-      ],
-      [
-        target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-4'),
-        { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-10deg)'] },
-        { duration: 1, at: '-0.5' },
-      ],
-    ];
-    timeline(sequence, { easingAndDuration, delay: 1 });
-  });
+  inView(
+    'section.section_wer_wir_sind',
+    ({ target }) => {
+      const sequence = [
+        [
+          target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-1'),
+          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-2.5deg)'] },
+          { duration: 1, at: '-0.5' },
+        ],
+        [
+          target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-2'),
+          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-5deg)'] },
+          { duration: 1, at: '-0.5' },
+        ],
+        [
+          target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-3'),
+          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-8.5deg)'] },
+          { duration: 1, at: '-0.5' },
+        ],
+        [
+          target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-4'),
+          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-10deg)'] },
+          { duration: 1, at: '-0.5' },
+        ],
+      ];
+      timeline(sequence, { easingAndDuration, delay: 0.5 });
+    },
+    { margin: '0px 0px 0px 0px', amount: window.innerWidth <= 1280 ? 0.5 : 0.85 },
+  );
 };
