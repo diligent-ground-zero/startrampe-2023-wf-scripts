@@ -221,6 +221,6 @@ export const initAnimations = () => {
       ];
       timeline(sequence, { easingAndDuration, delay: 0.5 });
     },
-    { margin: '0px 0px 0px 0px', amount: window.innerWidth <= 1280 ? 0.5 : 0.85 },
+    { margin: '0px 0px 0px 0px', amount: window.innerWidth <= 1440 ? 0.4 : 0.85 },
   );
 };

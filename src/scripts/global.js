@@ -33,7 +33,7 @@ export const globalScripts = () => {
 
   const observerOptions = {
     rootMargin: '50% 0px 0px 0px',
-    threshold: [1],
+    threshold: [0.75],
   };
 
   const observerCallback = (entries, observer) => {
