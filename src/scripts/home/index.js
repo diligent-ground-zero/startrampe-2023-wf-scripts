@@ -4,42 +4,13 @@ import 'swiper/css';
 import { timeline, inView } from 'motion';
 
 export const initSwipers = () => {
-  const swiperTeam = new Swiper('section.section_unser_team .swiper-container', {
-    modules: [Manipulation],
-    centeredSlides: true,
-    slidesPerView: 2,
-    allowTouchMove: false,
-    loop: true,
-    slideToClickedSlide: true,
-    updateOnWindowResize: true,
-    spaceBetween: 0,
-    loopAdditionalSlides: 2,
-    initialSlide: 10,
-    speed: 1200,
-    autoHeight: false,
-    breakpoints: {
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 50,
-        loopAdditionalSlides: 2,
-      },
-      1280: {
-        slidesPerView: 3,
-        spaceBetween: 175,
-        loopAdditionalSlides: 2,
-      },
-      1440: {
-        slidesPerView: 3,
-        spaceBetween: 25,
-        loopAdditionalSlides: 2,
-      },
-      1640: {
-        slidesPerView: 3.5,
-        spaceBetween: 100,
-        loopAdditionalSlides: 3,
-      },
-    },
-  });
+  setTimeout(() => {
+    const unserTeamSliderDots = document.querySelector(
+      'section.section_unser_team .section-unser-slider .startrampe-slider-nav',
+    );
+    console.log(unserTeamSliderDots.children);
+    unserTeamSliderDots.children[unserTeamSliderDots.children.length - 1].click();
+  }, 1500);
 
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
