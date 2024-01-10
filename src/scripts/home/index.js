@@ -8,7 +8,6 @@ export const initSwipers = () => {
     const unserTeamSliderDots = document.querySelector(
       'section.section_unser_team .section-unser-slider .startrampe-slider-nav',
     );
-    console.log(unserTeamSliderDots.children);
     unserTeamSliderDots.children[unserTeamSliderDots.children.length - 1].click();
   }, 1500);
 
