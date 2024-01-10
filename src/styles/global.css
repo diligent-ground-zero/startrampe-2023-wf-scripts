@@ -21,46 +21,35 @@
   transition: height var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
 }
 
-.navbar.scrolled.crossed-second-page-section .navbar-container {
-  height: 5rem;
-}
-
-.navbar.scrolled.crossed-second-page-section .navbar-container {
-  height: 5rem;
+.navbar.scrolled.scrolled .navbar-container {
+  height: 4.5rem;
 }
 
 .navbar .navbar-container .navbar_brand-link .navbar-brand_on-start .navbar-brand_on-start-logo {
   transition: min-width var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
 }
 
-.navbar.scrolled.crossed-second-page-section
-  .navbar-container
-  .navbar_brand-link
-  .navbar-brand_on-start
-  .navbar-brand_on-start-logo {
-  min-width: 8rem;
+.navbar.scrolled .navbar-container .navbar_brand-link .navbar-brand_on-start .navbar-brand_on-start-logo {
+  min-width: 7rem;
 }
 
-.navbar.scrolled.crossed-second-page-section
-  .navbar-container
-  .navbar_brand-link
-  .navbar-brand_on-start
-  .navbar-brand_on-start-logo-side-text,
-.navbar.scrolled.crossed-second-page-section.crossed-third-page-section
-  .navbar-container
-  .navbar_brand-link
-  .navbar-brand_on-start
-  .navbar-brand_on-start-logo,
-.navbar.scrolled.crossed-second-page-section .navbar_button-menu-button-wrapper .button {
+.navbar .navbar_brand-link {
+  opacity: 100;
+  pointer-events: auto;
+}
+
+.navbar.scrolled .navbar-container .navbar_brand-link .navbar-brand_on-start .navbar-brand_on-start-logo-side-text,
+.navbar.scrolled .navbar_button-menu-button-wrapper .button,
+.navbar.scrolled.crossed-second-page-section .navbar_brand-link {
   opacity: 0;
   pointer-events: none;
 }
 
-.navbar.scrolled.crossed-second-page-section.crossed-third-page-section {
+.navbar.scrolled.crossed-second-page-section {
   background-color: transparent;
 }
 
-.navbar.scrolled.crossed-second-page-section.crossed-third-page-section
+.navbar.scrolled.crossed-second-page-section
   .navbar_button-menu-button-wrapper
   .navbar_button-menu-button-hamburger-toggle::before {
   content: '';
@@ -68,8 +57,8 @@
   content: '';
   inset: 0;
   background-color: black;
-  width: 7rem;
-  height: 5rem;
+  width: 5rem;
+  height: 4.5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -104,7 +93,7 @@
   background-color: var(--black);
 }
 
-.navbar.scrolled.crossed-second-page-section.crossed-third-page-section.menu-open
+.navbar.scrolled.crossed-second-page-section.menu-open
   .navbar-container
   .navbar_brand-link
   .navbar-brand_on-start
@@ -494,20 +483,6 @@ section.section_unsere-geschaftfelder
   justify-content: center;
 }
 
-/* .section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active
-  .swiper-slide-team-text-wrap,
-.section_unser_team
-  .swiper-container
-  .swiper-wrapper.team
-  .swiper-slide.swiper-slide-active
-  .swiper-slide-team-text-wrap {
-  transform: translate(0);
-  flex-basis: auto;
-} */
-
 .section_unser_team
   .swiper-container
   .swiper-wrapper.team
@@ -669,8 +644,8 @@ section.section_hero .hero_heading-container .hero-heading.an-den-star {
   .navbar.scrolled.crossed-second-page-section
     .navbar_button-menu-button-wrapper
     .navbar_button-menu-button-hamburger-toggle::before {
-    width: 9rem;
-    height: 7.5rem;
+    width: 5rem;
+    height: 4.5rem;
   }
 
   .section_unser_team

@@ -15,7 +15,7 @@ export const initSwipers = () => {
     spaceBetween: 0,
     loopAdditionalSlides: 2,
     initialSlide: 10,
-    speed: 800,
+    speed: 1200,
     autoHeight: false,
     breakpoints: {
       768: {

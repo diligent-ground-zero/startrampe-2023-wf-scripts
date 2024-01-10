@@ -17,7 +17,6 @@ export const globalScripts = () => {
     } else {
       headerContainer.classList.remove('scrolled');
       headerContainer.classList.remove('crossed-second-page-section');
-      headerContainer.classList.remove('crossed-third-page-section');
     }
   };
 
@@ -33,15 +32,14 @@ export const globalScripts = () => {
   });
 
   const observerOptions = {
-    rootMargin: '50% 0px -50% 0px',
-    threshold: [0.3],
+    rootMargin: '50% 0px 0px 0px',
+    threshold: [1],
   };
 
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
       const idToClassMap = {
         'wer-wir-sind': 'crossed-second-page-section',
-        'unser-netzwerk': 'crossed-third-page-section',
       };
 
       if (entry.isIntersecting && idToClassMap.hasOwnProperty(entry.target.id) && isScrollingDown) {
@@ -65,9 +63,6 @@ export const globalScripts = () => {
     if (scrollPositionRelativeToSecondSection > secondSection.offsetHeight) {
       headerContainer.classList.add('crossed-second-page-section');
       headerContainer.classList.add('scrolled');
-    }
-    if (scrollPositionRelativeToSecondSection > secondSection.offsetHeight) {
-      headerContainer.classList.add('crossed-third-page-section');
     }
   }, 250);
 
