@@ -452,8 +452,8 @@ section.slanted.top::after {
   background-color: black;
 }
 
-#CybotCookiebotDialog input:checked +.CybotCookiebotDialogBodyLevelButtonSlider  {
-  background-color: var(--green);
+#CybotCookiebotDialog input:checked + span.CybotCookiebotDialogBodyLevelButtonSlider  {
+  background-color: var(--green) !important;
 }
 
 #CybotCookiebotDialogBodyLevelButtonsSelectPane .CybotCookiebotDialogBodyLevelButtonDescription {
