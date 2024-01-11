@@ -1,6 +1,8 @@
 :root {
   --startrampe-animation-duration: 0.6s;
   --startrampe-easing-fuction: cubic-bezier(0.39, 0.575, 0.565, 1);
+  --startrampe-font-family: 'Obviously SR', sans-serif;
+  --startramoe-font-family-bold: 'Obviously SR Bold', sans-serif;
 }
 
 .navbar {
@@ -194,8 +196,20 @@ section.slanted.top::after {
   max-height: unset;
 }
 
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper {
+  padding: 0 3rem;
+}
+
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide {
+  transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] {
+  margin-bottom: 200px;
+}
+
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
-  position: relative;
+  transform: translateY(75%);
 }
 
 .section_was_wir_tun
@@ -363,7 +377,7 @@ section.slanted.top::after {
   .swiper-slide
   .wwt-slide_image-wrapper
   .wwt-slide-image_crowd-left {
-  clip-path: inset(30% 0 20% 31%);
+  clip-path: inset(30% 0% 20% 50%);
   transform: translateX(0px);
   z-index: 1;
 }
@@ -374,7 +388,7 @@ section.slanted.top::after {
   .swiper-slide
   .wwt-slide_image-wrapper
   .wwt-slide-image_crowd-right {
-  clip-path: polygon(0% 10%, 62% 2%, 78% 88%, 0% 100%);
+  clip-path: polygon(0 16%, 37% 0, 63% 90%, 0 100%);
 }
 
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
@@ -405,6 +419,81 @@ section.slanted.top::after {
   background: var(--black);
 }
 
+#CybotCookiebotDialog {
+  font-family: var(--startrampe-font-family) !important;
+}
+
+#CybotCookiebotDialog #CybotCookiebotDialogHeader #CybotCookiebotDialogPoweredbyImage {
+  max-height: 5rem;
+}
+
+#CybotCookiebotDialog #CybotCookiebotDialogNav a.CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive {
+  color: black !important;
+  border-bottom: solid 2px black !important;
+  font-family: var(--startramoe-font-family-bold) !important;
+}
+
+#CybotCookiebotDialog #CybotCookiebotDialogNav a.CybotCookiebotDialogNavItemLink:hover {
+  color: pink !important;
+}
+
+#CybotCookiebotDialog
+  .CybotCookiebotDialogContentWrapper
+  #CybotCookiebotDialogFooter
+  #CybotCookiebotDialogBodyButtonsWrapper
+  button {
+  font-family: var(--startramoe-font-family-bold) !important;
+  border-radius: 0px !important;
+  font-family: 700;
+  border: solid 2px black;
+  text-transform: uppercase;
+}
+
+#CybotCookiebotDialog
+  .CybotCookiebotDialogContentWrapper
+  #CybotCookiebotDialogFooter
+  #CybotCookiebotDialogBodyButtonsWrapper
+  button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll {
+  background-color: black;
+}
+
+#CybotCookiebotDialog input:checked + .CybotCookiebotDialogBodyLevelButtonSlider {
+  background-color: var(--green);
+}
+
+#CybotCookiebotDialogBodyLevelButtonsSelectPane .CybotCookiebotDialogBodyLevelButtonDescription {
+  font-family: var(--startramoe-font-family-bold) !important;
+}
+
+#CybotCookiebotDialogBodyLevelButtonsSelectPane .CybotCookiebotDialogBodyLevelButtonDescription:hover {
+  color: black !important;
+}
+
+#CybotCookiebotDialog .CookieCard .CybotCookiebotDialogDetailBodyContentCookieContainerButton:hover,
+#CybotCookiebotDialog .CookieCard .CybotCookiebotDialogDetailBodyContentIABv2Tab:hover,
+#CybotCookiebotDialogDetailBodyContentCookieContainerTypes
+  .CybotCookiebotDialogDetailBodyContentCookieProvider:not(
+    .CybotCookiebotDialogDetailBodyContentCookieInfoCount
+  ):hover {
+  color: black !important;
+}
+
+#CybotCookiebotDialog a:hover:after,
+#CybotCookiebotDialog a:hover:before,
+#CybotCookiebotDialog button:hover:after,
+#CybotCookiebotDialog button:hover:before {
+  border-color: black !important;
+}
+
+#CybotCookiebotDialog #CybotCookiebotDialogBodyContentText a,
+#CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonIABHeaderViewPartnersLink,
+#CybotCookiebotDialog #CybotCookiebotDialogDetailBulkConsentList dt a,
+#CybotCookiebotDialog #CybotCookiebotDialogDetailFooter a,
+#CybotCookiebotDialog .CybotCookiebotDialogBodyLevelButtonIABDescription a,
+#CybotCookiebotDialog .CybotCookiebotDialogDetailBodyContentCookieLink,
+#CybotCookiebotDialogDetailBodyContentTextAbout a {
+  color: black;
+}
 @media (min-width: 620px) {
   .startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind {
     clip-path: polygon(0 0, 100% 0%, 100% 10%, 0% 100%);
@@ -434,6 +523,14 @@ section.slanted.top::after {
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover {
     clip-path: unset;
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] {
+    margin-bottom: 220px;
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
+    transform: translateY(70%);
   }
 }
 
@@ -474,6 +571,7 @@ section.slanted.top::after {
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] {
     transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction) 1;
+    margin-bottom: 0;
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] ~ .swiper-slide-next {
@@ -537,6 +635,16 @@ section.slanted.top::after {
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper > div {
     aspect-ratio: 1/1;
     min-width: 30rem;
+  }
+
+  .section_was_wir_tun
+    .swiper-container
+    .swiper-wrapper
+    .swiper-slide
+    .wwt-slide_image-wrapper
+    > div.wwt-slide-image_crowd {
+    min-width: 32rem;
+    justify-content: center;
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper img {

@@ -55,7 +55,7 @@ export const initSwipers = () => {
       speed: 900,
       breakpoints: {
         992: {
-          slidesOffsetBefore: -250,
+          slidesOffsetBefore: -150,
           slidesPerView: 3,
         },
         1280: {
