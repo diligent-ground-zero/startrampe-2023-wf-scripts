@@ -1,5 +1,3 @@
-import { inView } from 'motion';
-
 export const globalScripts = () => {
   const headerContainer = document.querySelector('.navbar');
   //create a function that listents to the scroll event, and adds a class to the header if the page is scrolled down
@@ -39,9 +37,10 @@ export const globalScripts = () => {
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
       const idToClassMap = {
-        'wer-wir-sind': 'crossed-second-page-section',
+        'wer-wir-sind-section': 'crossed-second-page-section',
       };
 
+      console.log(entry.target.id);
       if (entry.isIntersecting && idToClassMap.hasOwnProperty(entry.target.id) && isScrollingDown) {
         headerContainer.classList.add(idToClassMap[entry.target.id]);
       } else if (!entry.isIntersecting && idToClassMap.hasOwnProperty(entry.target.id) && !isScrollingDown) {
