@@ -452,7 +452,7 @@ section.slanted.top::after {
   background-color: black;
 }
 
-#CybotCookiebotDialog input:checked + .CybotCookiebotDialogBodyLevelButtonSlider {
+#CybotCookiebotDialog input:checked +.CybotCookiebotDialogBodyLevelButtonSlider  {
   background-color: var(--green);
 }
 
