@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Manipulation, Autoplay, Pagination } from 'swiper/modules';
+import { Manipulation, Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import { timeline, inView } from 'motion';
 
@@ -41,13 +41,18 @@ export const initSwipers = () => {
 
   if (window.matchMedia('(min-width: 992px)').matches) {
     const swiper = new Swiper('section.section_was_wir_tun .swiper-container', {
-      modules: [Manipulation, Pagination, Autoplay],
+      modules: [Manipulation, Pagination, Autoplay, Navigation],
       slidesPerView: 'auto',
       centeredSlides: true,
       allowTouchMove: true,
       initialSlide: 2,
       spaceBetween: 25,
       updateOnWindowResize: true,
+      //TODO
+      navigation: {
+        nextEl: '.swiper-controll-inner-right',
+        prevEl: '.swiper-controll-inner-left',
+      },
       autoplay: {
         delay: 4000,
         pauseOnMouseEnter: true,
@@ -69,6 +74,18 @@ export const initSwipers = () => {
         1560: {
           slidesPerView: 4,
           centeredSlides: true,
+        },
+      },
+      on: {
+        reachEnd: function () {
+          document.querySelector('.swiper-controll-inner-right').style.display = 'none';
+        },
+        reachBeginning: function () {
+          document.querySelector('.swiper-controll-inner-left').style.display = 'none';
+        },
+        fromEdge: function () {
+          document.querySelector('.swiper-controll-inner-right').style.display = '';
+          document.querySelector('.swiper-controll-inner-left').style.display = '';
         },
       },
     });

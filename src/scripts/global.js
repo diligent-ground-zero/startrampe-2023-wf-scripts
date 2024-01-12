@@ -39,8 +39,6 @@ export const globalScripts = () => {
       const idToClassMap = {
         'wer-wir-sind-section': 'crossed-second-page-section',
       };
-
-      console.log(entry.target.id);
       if (entry.isIntersecting && idToClassMap.hasOwnProperty(entry.target.id) && isScrollingDown) {
         headerContainer.classList.add(idToClassMap[entry.target.id]);
       } else if (!entry.isIntersecting && idToClassMap.hasOwnProperty(entry.target.id) && !isScrollingDown) {
