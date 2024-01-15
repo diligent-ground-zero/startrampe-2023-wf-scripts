@@ -44,11 +44,10 @@ export const initSwipers = () => {
       modules: [Manipulation, Pagination, Autoplay, Navigation],
       slidesPerView: 'auto',
       centeredSlides: true,
-      allowTouchMove: true,
+      allowTouchMove: false,
       initialSlide: 2,
-      spaceBetween: 25,
+      spaceBetween: 75,
       updateOnWindowResize: true,
-      //TODO
       navigation: {
         nextEl: '.swiper-controll-inner-right',
         prevEl: '.swiper-controll-inner-left',
@@ -57,10 +56,11 @@ export const initSwipers = () => {
       autoplay: {
         delay: 3500,
       },
-      speed: 1100,
+      speed: 1500,
       breakpoints: {
         992: {
           slidesPerView: 3,
+          spaceBetween: 75,
         },
         1280: {
           slidesPerView: 3,
@@ -71,7 +71,7 @@ export const initSwipers = () => {
           centeredSlides: true,
         },
         1560: {
-          slidesPerView: 4,
+          slidesPerView: 3.5,
           centeredSlides: true,
         },
       },
@@ -100,7 +100,7 @@ export const initSwipers = () => {
       // If the clicked slide is the same as the previously clicked slide, toggle its margin and 'open' attribute
       if (previousClickedIndex === clickedIndex) {
         if (currentSlide.dataset.open) {
-          currentSlide.style.marginRight = '25px';
+          currentSlide.style.marginRight = '75px';
           delete currentSlide.dataset.open;
         } else {
           currentSlide.style.marginRight = '25%';
@@ -110,7 +110,7 @@ export const initSwipers = () => {
         // Remove 'open' data attribute and reset margin from all slides
         swiper.slides.forEach((slide) => {
           delete slide.dataset.open;
-          slide.style.marginRight = '25px'; // Reset margin
+          slide.style.marginRight = '75px'; // Reset margin
         });
 
         // Add margin and 'open' attribute to the clicked slide
@@ -118,9 +118,6 @@ export const initSwipers = () => {
         currentSlide.dataset.open = true;
       }
       swiper.updateSlidesClasses();
-      swiper.slideTo(clickedIndex);
-
-      // Update the previously clicked slide index
       previousClickedIndex = clickedIndex;
     });
 

@@ -151,7 +151,8 @@ section.slanted.top::after {
   content: '';
   background: var(--background);
   position: absolute;
-  z-index: -1;
+  isolation: isolate;
+  z-index: 2;
   top: -5rem;
   left: 0;
   right: 0;
@@ -202,9 +203,9 @@ section.slanted.top::after {
   max-height: unset;
 }
 
-.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper {
+/* .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper {
   padding: 0 3rem;
-}
+} */
 
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide {
   transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
@@ -235,9 +236,6 @@ section.slanted.top::after {
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide {
   width: 30rem;
 }
-.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper {
-  transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
-}
 
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper .wwt-slide_description {
   opacity: 0;
@@ -251,6 +249,10 @@ section.slanted.top::after {
   filter: brightness(40%);
   display: flex;
   justify-content: center;
+}
+
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper.ideation {
+  transform: translate(-50px, -25px);
 }
 
 .section_was_wir_tun
@@ -396,7 +398,16 @@ section.slanted.top::after {
 .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
   transform: translate(0px, -25px);
 }
-.startrampe_heading_group_text .heading-style-h2.clipped.das-team {
+
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.crowd-ideation {
+  margin-top: 150px;
+}
+
+.section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
+  margin-top: 0px;
+}
+
+.startrampe_heading_group_text .heading-style-h2.clipped.dass-team {
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
   line-height: 3.2rem;
 }
@@ -529,6 +540,24 @@ section.slanted.top::after {
 }
 
 @media (min-width: 992px) {
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.crowd-ideation {
+    margin-top: 100px;
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.ideation {
+    margin-top: 75px;
+  }
+  .section_was_wir_tun
+    .swiper-container
+    .swiper-wrapper
+    .swiper-slide.swiper-slide.venture-building
+    .wwt-slide_heading-wrapper {
+    margin-top: 50px;
+  }
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper {
+    transition: all var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+  }
+
   .section_unser_team .startrampe-slider-nav.team .w-slider-dot {
     width: 1rem;
     height: 1rem;
@@ -771,6 +800,14 @@ section.slanted.top::after {
 }
 
 @media (min-width: 1280px) {
+  .section_was_wir_tun
+    .swiper-container
+    .swiper-wrapper
+    .swiper-slide.swiper-slide.venture-building
+    .wwt-slide_heading-wrapper {
+    margin-top: 100px;
+  }
+
   .startrampe_heading_group_text .heading-style-h2.clipped.das-team {
     clip-path: polygon(0 0, 100% 0%, 100% 40%, 0% 100%);
     line-height: 4.8rem;
