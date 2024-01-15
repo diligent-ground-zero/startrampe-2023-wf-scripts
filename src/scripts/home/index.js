@@ -53,14 +53,13 @@ export const initSwipers = () => {
         nextEl: '.swiper-controll-inner-right',
         prevEl: '.swiper-controll-inner-left',
       },
+      loop: true,
       autoplay: {
-        delay: 4000,
-        pauseOnMouseEnter: true,
+        delay: 3500,
       },
-      speed: 900,
+      speed: 1100,
       breakpoints: {
         992: {
-          slidesOffsetBefore: -150,
           slidesPerView: 3,
         },
         1280: {
@@ -76,18 +75,18 @@ export const initSwipers = () => {
           centeredSlides: true,
         },
       },
-      on: {
-        reachEnd: function () {
-          document.querySelector('.swiper-controll-inner-right').style.display = 'none';
-        },
-        reachBeginning: function () {
-          document.querySelector('.swiper-controll-inner-left').style.display = 'none';
-        },
-        fromEdge: function () {
-          document.querySelector('.swiper-controll-inner-right').style.display = '';
-          document.querySelector('.swiper-controll-inner-left').style.display = '';
-        },
-      },
+      // on: {
+      //   reachEnd: function () {
+      //     document.querySelector('.swiper-controll-inner-right').style.display = 'none';
+      //   },
+      //   reachBeginning: function () {
+      //     document.querySelector('.swiper-controll-inner-left').style.display = 'none';
+      //   },
+      //   fromEdge: function () {
+      //     document.querySelector('.swiper-controll-inner-right').style.display = '';
+      //     document.querySelector('.swiper-controll-inner-left').style.display = '';
+      //   },
+      // },
     });
 
     swiper.autoplay.stop();
@@ -238,6 +237,6 @@ export const initAnimations = () => {
       ];
       timeline(sequence, { easingAndDuration, delay: 0.5 });
     },
-    { margin: '0px 0px 0px 0px', amount: window.innerWidth <= 1440 ? 0.3 : 0.85 },
+    { margin: '0px 0px 0px 0px', amount: 0.4 },
   );
 };

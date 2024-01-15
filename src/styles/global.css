@@ -66,6 +66,13 @@
   transform: translate(-50%, -50%);
 }
 
+.navbar.scrolled.crossed-second-page-section
+  .navbar_button-menu-button-wrapper
+  .navbar_button-menu-button-hamburger-toggle:hover::before {
+  background-color: var(--pink);
+  transition: background-color var(--startrampe-animation-duration) var(--startrampe-easing-fuction);
+}
+
 .navbar.scrolled.crossed-second-page-section.menu-open {
   background-color: var(--black);
   transition: background-color 0.5s var(--startrampe-easing-fuction);
