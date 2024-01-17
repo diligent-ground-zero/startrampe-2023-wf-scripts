@@ -4,13 +4,6 @@ import 'swiper/css';
 import { timeline, inView } from 'motion';
 
 export const initSwipers = () => {
-  setTimeout(() => {
-    const unserTeamSliderDots = document.querySelector(
-      'section.section_unser_team .section-unser-slider .startrampe-slider-nav',
-    );
-    unserTeamSliderDots.children[unserTeamSliderDots.children.length - 1].click();
-  }, 1500);
-
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
 

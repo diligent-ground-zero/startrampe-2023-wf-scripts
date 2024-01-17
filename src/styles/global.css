@@ -808,7 +808,6 @@ section.slanted.top::after {
 }
 
 @media (min-width: 1280px) {
-
   .section_unser_netzwerk .heading-wrapper .netzwerk_paragraph-element {
     font-size: inherit;
   }
