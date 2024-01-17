@@ -606,7 +606,7 @@ section.slanted.top::after {
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
-    transform: translateX(95%);
+    transform: translateX(35rem);
     position: absolute;
   }
 
