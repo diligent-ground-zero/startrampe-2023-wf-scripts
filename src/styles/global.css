@@ -540,8 +540,16 @@ section.slanted.top::after {
 }
 
 @media (min-width: 992px) {
+  .section_unser_netzwerk .heading-wrapper .netzwerk_paragraph-element {
+    font-size: 1rem;
+    background-color: white;
+    padding: 1rem 0;
+    z-index: 1;
+    position: relative;
+  }
+
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.crowd-ideation {
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.ideation {
@@ -800,6 +808,15 @@ section.slanted.top::after {
 }
 
 @media (min-width: 1280px) {
+
+  .section_unser_netzwerk .heading-wrapper .netzwerk_paragraph-element {
+    font-size: inherit;
+  }
+
+  .startrampe_heading_group_text .heading-style-h2.clipped.was-wir-tun {
+    clip-path: polygon(0 0, 100% 0%, 100% 50%, 0% 100%);
+  }
+
   .section_was_wir_tun
     .swiper-container
     .swiper-wrapper
@@ -840,7 +857,6 @@ section.slanted.top::after {
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
     transform: translateX(35rem);
   }
-
 }
 
 @media screen and (min-width: 1440px) {

@@ -54,13 +54,14 @@ export const initSwipers = () => {
       },
       loop: true,
       autoplay: {
-        delay: 3500,
+        delay: 3200,
       },
-      speed: 1500,
+      speed: 1200,
       breakpoints: {
         992: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 75,
+          centeredSlides: false,
         },
         1280: {
           slidesPerView: 3,
