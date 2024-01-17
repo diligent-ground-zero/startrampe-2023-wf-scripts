@@ -103,7 +103,7 @@ export const initSwipers = () => {
           currentSlide.style.marginRight = '75px';
           delete currentSlide.dataset.open;
         } else {
-          currentSlide.style.marginRight = '25%';
+          currentSlide.style.marginRight = '35rem';
           currentSlide.dataset.open = true;
         }
       } else {
@@ -114,7 +114,7 @@ export const initSwipers = () => {
         });
 
         // Add margin and 'open' attribute to the clicked slide
-        currentSlide.style.marginRight = '25%';
+        currentSlide.style.marginRight = '35rem';
         currentSlide.dataset.open = true;
       }
 
