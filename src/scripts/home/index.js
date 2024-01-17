@@ -67,11 +67,11 @@ export const initSwipers = () => {
           centeredSlides: true,
         },
         1440: {
-          slidesPerView: 3.5,
+          slidesPerView: 3,
           centeredSlides: true,
         },
         1560: {
-          slidesPerView: 3.5,
+          slidesPerView: 3,
           centeredSlides: true,
         },
       },
@@ -117,6 +117,13 @@ export const initSwipers = () => {
         currentSlide.style.marginRight = '25%';
         currentSlide.dataset.open = true;
       }
+
+      if (swiper.autoplay.running) {
+        swiper.autoplay.stop();
+      } else {
+        swiper.autoplay.start();
+      }
+
       swiper.updateSlidesClasses();
       previousClickedIndex = clickedIndex;
     });
