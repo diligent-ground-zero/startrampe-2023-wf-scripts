@@ -507,12 +507,21 @@ section.slanted.top::after {
 #CybotCookiebotDialogDetailBodyContentTextAbout a {
   color: black !important;
 }
+
+.startrampe_heading_group_text .heading-style-h2.clipped.das-team {
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+}
+
 @media (min-width: 620px) {
   .startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind {
     clip-path: polygon(0 0, 100% 0%, 100% 10%, 0% 100%);
   }
 }
 @media (min-width: 768px) {
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_image-wrapper {
+    transform: translate(-70px, -25px);
+  }
+
   .startrampe_heading_group_text .heading-style-h2.clipped {
     clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
   }
@@ -614,7 +623,7 @@ section.slanted.top::after {
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
-    transform: translateX(25rem);
+    transform: translateX(30rem);
     position: absolute;
   }
 
@@ -805,9 +814,16 @@ section.slanted.top::after {
   .startrampe_heading_group_text .heading-style-h2.clipped.das-team {
     line-height: 4.8rem;
   }
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.crowd-ideation {
+    margin-top: 75px;
+  }
 }
 
 @media (min-width: 1280px) {
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide .wwt-slide_heading-wrapper.crowd-ideation {
+    margin-top: 100px;
+  }
+
   .section_unser_netzwerk .heading-wrapper .netzwerk_paragraph-element {
     font-size: inherit;
   }
