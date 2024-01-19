@@ -870,7 +870,7 @@ section.slanted.top::after {
   }
 
   .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
-    transform: translateX(35rem);
+    transform: translateX(26rem);
   }
 }
 
@@ -885,5 +885,9 @@ section.slanted.top::after {
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
     line-height: 1.1;
+  }
+
+  .section_was_wir_tun .swiper-container .swiper-wrapper .swiper-slide[data-open] .wwt-slide_heading-wrapper {
+    transform: translateX(32rem);
   }
 }
