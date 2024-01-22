@@ -541,6 +541,15 @@ section.slanted.top::after {
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
 }
 
+.section_unser_netzwerk
+  .netzwerk_grid-element
+  .netzwerk_item:hover
+  .netzwerk-item_title-element
+  .netzwerk-item_title
+  a.netzwerk-item_title_link {
+  color: var(--pink);
+}
+
 @media (min-width: 620px) {
   .startrampe_heading_group_text .heading-style-h2.clipped.wer-wir-sind {
     clip-path: polygon(0 0, 100% 0%, 100% 10%, 0% 100%);
@@ -569,10 +578,6 @@ section.slanted.top::after {
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item {
     clip-path: polygon(0 100%, 20% 100%, 100% 60%, 100% 0, 0 0);
-  }
-
-  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover {
-    clip-path: unset;
   }
 }
 
