@@ -235,6 +235,6 @@ export const initAnimations = () => {
       ];
       timeline(sequence, { easingAndDuration, delay: 0.5 });
     },
-    { margin: '0px 0px 0px 0px', amount: 0.35 },
+    { margin: '0px 0px 0px 0px', amount: 0.2 },
   );
 };
