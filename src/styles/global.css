@@ -164,6 +164,10 @@ section.slanted.top::after {
   overflow: visible;
 }
 
+.section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover .netzwerk-item_title-element .netzwerk-item_title {
+  clip-path: unset;
+}
+
 .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
   clip-path: polygon(0 100%, 42% 100%, 100% 70%, 100% 0, 0 0);
 }
@@ -560,7 +564,6 @@ section.slanted.top::after {
   }
 
   .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
-    /* clip-path: polygon(0 100%, 5% 100%, 100% 73%, 100% 0, 0 0); */
     clip-path: unset;
   }
 
