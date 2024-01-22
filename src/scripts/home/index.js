@@ -214,22 +214,22 @@ export const initAnimations = () => {
       const sequence = [
         [
           target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-1'),
-          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-2.5deg)'] },
+          { opacity: 1, transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-2.5deg)'] },
           { duration: 1, at: '-0.5' },
         ],
         [
           target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-2'),
-          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-5deg)'] },
+          { opacity: 1, transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-5deg)'] },
           { duration: 1, at: '-0.5' },
         ],
         [
           target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-3'),
-          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-8.5deg)'] },
+          { opacity: 1, transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-8.5deg)'] },
           { duration: 1, at: '-0.5' },
         ],
         [
           target.querySelector('.x-images-wrapper .x-wws-image-wrapper.image-4'),
-          { opacity: [0, 1], transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-10deg)'] },
+          { opacity: 1, transform: ['translate(-100%, 15%) rotate(5deg)', 'translate(0,0) rotate(-10deg)'] },
           { duration: 1, at: '-0.5' },
         ],
       ];
