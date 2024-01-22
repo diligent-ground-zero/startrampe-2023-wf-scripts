@@ -572,7 +572,13 @@ section.slanted.top::after {
     line-height: 3.2rem;
   }
 
-  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title {
+  /* .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item .netzwerk-item_title-element .netzwerk-item_title,
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover .netzwerk-item_title-element .netzwerk-item_title
+   {
+    clip-path: unset;
+  } */
+
+  .section_unser_netzwerk .netzwerk_grid-element .netzwerk_item:hover {
     clip-path: unset;
   }
 
