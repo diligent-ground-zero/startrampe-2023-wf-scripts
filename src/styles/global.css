@@ -432,7 +432,32 @@ section.slanted.top::after {
   background: var(--black);
 }
 
-#CybotCookiebotDialog {
+#CookiebotWidget .CookiebotWidget-body .CookiebotWidget-consents-list li.CookiebotWidget-approved svg {
+  fill: var(--black) !important;
+}
+
+#CookiebotWidget .CookiebotWidget-consent-details button {
+  font-weight: 500 !important;
+  color: black !important;
+}
+
+#CookiebotWidget #CookiebotWidget-buttons #CookiebotWidget-btn-withdraw {
+  border: solid 2px black !important;
+  border-radius: 0;
+  font-family: var(--startramoe-font-family-bold) !important;
+  text-transform: uppercase;
+}
+
+#CookiebotWidget #CookiebotWidget-buttons #CookiebotWidget-btn-change {
+  background-color: var(--black) !important;
+  border: solid 2px black !important;
+  border-radius: 0;
+  font-family: var(--startramoe-font-family-bold) !important;
+  text-transform: uppercase;
+}
+
+#CybotCookiebotDialog,
+#CookiebotWidget-widgetContent {
   font-family: var(--startrampe-font-family) !important;
 }
 
