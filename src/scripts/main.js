@@ -5,12 +5,11 @@ import { globalScripts } from './global';
 const init = () => {
   globalScripts();
 
-  //dinamicaly import these scripts only on the home page
-
-  if (window.location.pathname === '/') {
+  if (window.location.pathname) {
     import('./home').then((module) => {
-      module.initSwipers();
-      module.initAnimations();
+      // module.initSwipers();
+      // module.initAnimations();
+      module.netwzerkScripts();
     });
   }
 };

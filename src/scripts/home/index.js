@@ -3,6 +3,29 @@ import { Manipulation, Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import { timeline, inView } from 'motion';
 
+
+export const netwzerkScripts = () => {
+
+  if (window.matchMedia('(max-width: 1280px)').matches) {
+    const netwerkContainer = document.querySelector('.nw-items-container');
+    if(netwerkContainer) {
+      const netwerkItems = netwerkContainer.querySelectorAll('.nw-item');
+      netwerkItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          if (item.classList.contains('active')) {
+            item.classList.remove('active');
+          } else {
+            netwerkItems.forEach((item) => {
+              item.classList.remove('active');
+            });
+            item.classList.add('active');
+          }
+        });
+      });
+    }
+  }
+}
+
 export const initSwipers = () => {
   if (window.matchMedia('(max-width: 992px)').matches) {
     let previousActiveElementIndex;
