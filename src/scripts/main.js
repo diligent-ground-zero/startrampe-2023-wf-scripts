@@ -7,8 +7,8 @@ const init = () => {
 
   if (window.location.pathname) {
     import('./home').then((module) => {
-      // module.initSwipers();
-      // module.initAnimations();
+      module.initSwipers();
+      module.initAnimations();
       module.netwzerkScripts();
     });
   }
