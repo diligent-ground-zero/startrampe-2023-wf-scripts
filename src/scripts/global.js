@@ -1,6 +1,16 @@
 export const globalScripts = () => {
   const headerContainer = document.querySelector('.navbar');
+
+  const hamburgerMenu = document.querySelector('.navbar_button-menu-button-hamburger-toggle');
   //create a function that listents to the scroll event, and adds a class to the header if the page is scrolled down
+
+  //create a global click listener for links that have the class .navbar_nav-link
+  const navLinks = document.querySelectorAll('.navbar_nav-link');
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      hamburgerMenu.click();
+    });
+  });
 
   let lastScrollY = window.scrollY;
   let isScrollingDown = false;
@@ -61,7 +71,7 @@ export const globalScripts = () => {
       headerContainer.classList.add('crossed-second-page-section');
       headerContainer.classList.add('scrolled');
     }
-  }, 250);
+  }, 500);
 
   //add a mutation observer to the .navbar_menu-button.w-nav-button element so when the elements has the class .w--open
   const menuButton = document.querySelector('.w-nav-button');
